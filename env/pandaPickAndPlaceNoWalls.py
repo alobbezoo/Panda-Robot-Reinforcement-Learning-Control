@@ -42,39 +42,7 @@ class PickAndPlace(Task):
     def _create_scene(self) -> None:
         """Create the scene."""
         self.sim.create_plane(z_offset=-0.4)
-        self.sim.create_table(length=20, width=20, height=0.1, x_offset=-0.3, \
-            lateral_friction=1, spinning_friction=1)
-
-        self.sim.create_box(
-            body_name="wall1",
-            half_extents= [1.5, 0.25, 1.5], 
-            mass=0,
-            position=np.array([-0.75, 1.25, 0]), 
-            rgba_color=np.array([0.95, 0.95, 0.95, 1]),
-            lateral_friction = 1, 
-            spinning_friction = 1, 
-        )
-
-        self.sim.create_box(
-            body_name="wall2",
-            half_extents= [1.5, 0.25, 1.5], 
-            mass=0,
-            position=np.array([-0.75, -1.25, 0]), #[away, prependicular, vertical]
-            rgba_color=np.array([0.95, 0.95, 0.95, 1]),
-            lateral_friction = 1, 
-            spinning_friction = 1, 
-        )
-
-        self.sim.create_box(
-            body_name="wall3",
-            half_extents= [0.25, 1.5, 1.5], 
-            mass=0,
-            position=np.array([-2.25, 0, 0]), 
-            rgba_color=np.array([0.95, 0.95, 0.95, 1]),
-            lateral_friction = 1, 
-            spinning_friction = 1, 
-        )
-
+        self.sim.create_table(length=1.1, width=0.7, height=0.4, x_offset=-0.3)
         
         self.sim.create_cylinder(
             body_name="object",
@@ -87,6 +55,7 @@ class PickAndPlace(Task):
             spinning_friction = 1, 
         )
         
+
         self.sim.create_box(
             body_name="target",
             half_extents=np.ones(3) * self.target_size / 2,
