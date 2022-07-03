@@ -9,6 +9,7 @@
 import numpy as np
 import rospy
 from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import String
 from geometry_msgs.msg import Pose
 import time
 
@@ -26,7 +27,16 @@ def talker(kind, message):
 		rospy.loginfo(message)
 		pose_pub.publish(message)
 
+def listener():
+	rospy.Subscriber("/bridge/joint_angles/success", String, clear)
+	rospy.spin()
+
+def clear():
+	clear = True
+
 def publish_joint(env):
+	clear = False
+	listener()
 	body_name = env.robot.body_name
 	joint_angles = np.array([env.sim.get_joint_angle(joint=i, body=body_name) for i in range(7)])
 
@@ -36,6 +46,8 @@ def publish_joint(env):
 	message.data = joint_goals
 
 	talker("joints", message)
+	while clear = False:
+		pass
 
 def publish_pose(env):
 	quat = env.sim.get_link_orientation("panda", 11)
