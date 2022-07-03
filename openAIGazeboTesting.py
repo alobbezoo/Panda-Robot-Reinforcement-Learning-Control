@@ -3,61 +3,60 @@
 from PIL import Image
 from torchvision import transforms
 
-from wrappers.pandaWrapperReach import PandaWrapper
-
 import gym
 import gym.spaces
+from panda_gym.envs.tasks.reach import Reach
 import os
 import register
 
 import matplotlib.pyplot as plt
 import numpy as np
-import tf.transformations
+#import tf.transformations
 
 # ROS/Gazebo/Moveit Imports:
 import sys
-from motionFunctions import *
+import geometry_msgs.msg
+import time
+from wrappers.pandaWrapperVect_BW_D_0 import PandaWrapper
+from helpers.ros_bridge_send import publish_joint
+# from motionFunctions import *
 
-env = gym.make("PandaReachDepth-v1", render=True)
+env = gym.make("PandaGraspDepthDense-v1", render=True)
 env = PandaWrapper(env)
-obs = env.reset()
-controller = MoveGroupPythonInterface()
+env.reset()
+env.render()
+publish_joint(env)
+for i in range(20):
+    time.sleep(3)
+    obs, _, _, _ = env.step(action=env.action_space.sample())
+    publish_joint(env)
 
-for i in range(5):
+# print("obs: ", obs)
+# # controller = MoveGroupPythonInterface()
 
-    action = env.action_space.sample()
-    obs, _, _, _ = env.step(10*action)
+# action = env.action_space.sample()
+# print("action: ", action)
+# obs, _, _, _ = env.step(10*action)
+# publish_joint(env)
 
-    quat = env.sim.get_link_orientation("panda", 11)
-    pos = env.sim.get_link_position("panda", 11)
+# for i in range(5):
 
-    # print("get_ee_position: ", env.robot.get_ee_position())
-    print("get_joint_angle: ",env.sim.get_link_orientation("panda", 11)) 
-    print("get_link_position: ",env.sim.get_link_position("panda", 11)) 
+#     action = env.action_space.sample()
+#     print("action: ", action)
+#     obs, _, _, _ = env.step(10*action)
+#     print("obs: ", obs)
 
+#     quat = env.sim.get_link_orientation("panda", 11)
+#     pos = env.sim.get_link_position("panda", 11)
+#     tgt = env.sim.get_base_position("object")
+#     print("target position: ", tgt)
 
-    # controller.go_to_pose_goal(pose_goal_orientation_x = quat[0], pose_goal_orientation_y = quat[1], 
-    #     pose_goal_orientation_z = quat[2], pose_goal_orientation_w = quat[3],  pose_goal_position_x = pos[0], 
-    #     pose_goal_position_y = pos[1], pose_goal_position_z = pos[2])
+#     print("get_ee_position: ", env.robot.get_ee_position())
 
-    # pose_goal.orientation.x= quat[0]
-    # pose_goal.orientation.y = quat[1]
-    # pose_goal.orientation.z = quat[2]
-    # pose_goal.orientation.w = quat[3]
+#     publish_joint(env)
 
-    # pose_goal.position.x = pos[0]
-    # pose_goal.position.y = pos[1]
-    # pose_goal.position.z = pos[2]
-
-    # controller.go_to_pose_goal(pose_goal)
-
-    # body_name = env.robot.body_name
-    # joint_angles = np.array([env.sim.get_joint_angle(joint=i, body=body_name) for i in range(7)])
-    # controller.go_to_joint_state(joint_goal0 = joint_angles[0], joint_goal1 = joint_angles[1], 
-    # joint_goal2 = joint_angles[2], joint_goal3 = joint_angles[3], joint_goal4 = joint_angles[4], 
-    # joint_goal5 = joint_angles[5], joint_goal6 = joint_angles[5])
-
-    # img = env.render()
+#     img = env.render()
+#     time.sleep(2)
 
 
 

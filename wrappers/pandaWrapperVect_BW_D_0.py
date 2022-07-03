@@ -45,7 +45,7 @@ class PandaWrapper(gym.Wrapper):
   def render_bw_d_0(self):
 
     img, depth = self.env.render(mode = 'rgb_array', width = 100, height= 100, distance = 1, 
-      target_position = [0.3, 0, 0.15], yaw = 75, pitch = -20)
+      target_position = [0.3, 0, 0.15], yaw = 70, pitch = -20)
 
     bw_d_0 = self.image_process(img, depth)
     
@@ -53,8 +53,12 @@ class PandaWrapper(gym.Wrapper):
   
   def render(self, mode='rgb_array'):
 
-    img, depth = self.env.render(mode = 'rgb_array', width = 1080, height= 720) 
-    
+    img, depth = self.env.render(mode = 'rgb_array', width = 1080, height= 720, distance = 2, 
+      target_position = [-0.25, 0, 0], yaw = 0, pitch = -5) 
+    # im = Image.fromarray(img)
+    # print("CALL!")
+    # im.save("test.png")
+
     return img
 
   def reset(self):
