@@ -1,0 +1,1308 @@
+Script started on 2022-07-02 18:59:41-04:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="105" LINES="55"]
+bash: devel/setup.bash: No such file or directory
+bash: /home/hjkwon/catkin_ws/src/moveit/devel/setup.bash: No such file or directory
+]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02[00m$ cd .. [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K.
+]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining[00m$ conda activate r l_env
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining[00m$ ptyo[K[K[Kython3  mainSACVec.py 
+pybullet build time: Dec  1 2021 18:34:28
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+(EE) 
+Fatal server error:
+(EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE) 
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+
+ 
+ kwargs:  {'policy': 'MlpPolicy', 'device': 'cpu', 'verbose': 0, 'use_sde': 'True', 'use_sde_at_warmup': 'True', 'ent_coef': 0.008820073767094497, 'gradient_steps': 50, 'train_freq': 50, 'gamma': 0.9795669800650622, 'tau': 0.0028732553225876887, 'learning_rate': 0.0009069077086214123, 'batch_size': 256, 'learning_starts': 9000, 'buffer_size': 50000, 'policy_kwargs': {'net_arch': [128, 128, 128]}}
+n_envs:  2
+actionNoiseInt:  0.15
+NOTE: Testing the model which performed well for grasping with the reach problem
+
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Num timesteps: 2000
+Best mean reward: -inf - Last mean reward per episode: -49.52
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190003_numTimesteps_2000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Num timesteps: 4000
+Best mean reward: -49.52 - Last mean reward per episode: -49.76
+Num timesteps: 6000
+Best mean reward: -49.52 - Last mean reward per episode: -49.46
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190013_numTimesteps_6000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 8000
+Best mean reward: -49.46 - Last mean reward per episode: -49.20
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190017_numTimesteps_8000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 10000
+Best mean reward: -49.20 - Last mean reward per episode: -48.66
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190028_numTimesteps_10000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 12000
+Best mean reward: -48.66 - Last mean reward per episode: -47.83
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190045_numTimesteps_12000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 14000
+Best mean reward: -47.83 - Last mean reward per episode: -48.04
+Num timesteps: 16000
+Best mean reward: -47.83 - Last mean reward per episode: -46.33
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190118_numTimesteps_16000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 18000
+Best mean reward: -46.33 - Last mean reward per episode: -42.86
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190134_numTimesteps_18000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 20000
+Best mean reward: -42.86 - Last mean reward per episode: -39.42
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190153_numTimesteps_20000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 22000
+Best mean reward: -39.42 - Last mean reward per episode: -35.55
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190212_numTimesteps_22000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 24000
+Best mean reward: -35.55 - Last mean reward per episode: -33.73
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190231_numTimesteps_24000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 26000
+Best mean reward: -33.73 - Last mean reward per episode: -29.20
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190248_numTimesteps_26000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 28000
+Best mean reward: -29.20 - Last mean reward per episode: -26.38
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190308_numTimesteps_28000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 30000
+Best mean reward: -26.38 - Last mean reward per episode: -21.28
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190324_numTimesteps_30000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 32000
+Best mean reward: -21.28 - Last mean reward per episode: -14.65
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190343_numTimesteps_32000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 34000
+Best mean reward: -14.65 - Last mean reward per episode: -10.39
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190359_numTimesteps_34000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 36000
+Best mean reward: -10.39 - Last mean reward per episode: -9.68
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190419_numTimesteps_36000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 38000
+Best mean reward: -9.68 - Last mean reward per episode: -7.97
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190439_numTimesteps_38000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 40000
+Best mean reward: -7.97 - Last mean reward per episode: -6.06
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190457_numTimesteps_40000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 42000
+Best mean reward: -6.06 - Last mean reward per episode: -4.85
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190516_numTimesteps_42000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 44000
+Best mean reward: -4.85 - Last mean reward per episode: -3.88
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190534_numTimesteps_44000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 46000
+Best mean reward: -3.88 - Last mean reward per episode: -3.28
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190553_numTimesteps_46000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 48000
+Best mean reward: -3.28 - Last mean reward per episode: -3.05
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190613_numTimesteps_48000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 50000
+Best mean reward: -3.05 - Last mean reward per episode: -2.85
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190632_numTimesteps_50000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 52000
+Best mean reward: -2.85 - Last mean reward per episode: -2.78
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190652_numTimesteps_52000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 54000
+Best mean reward: -2.78 - Last mean reward per episode: -2.50
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190709_numTimesteps_54000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 56000
+Best mean reward: -2.50 - Last mean reward per episode: -2.37
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190729_numTimesteps_56000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 58000
+Best mean reward: -2.37 - Last mean reward per episode: -2.38
+Num timesteps: 60000
+Best mean reward: -2.37 - Last mean reward per episode: -2.22
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190808_numTimesteps_60000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 62000
+Best mean reward: -2.22 - Last mean reward per episode: -2.15
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_190828_numTimesteps_62000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 64000
+Best mean reward: -2.15 - Last mean reward per episode: -2.27
+Num timesteps: 66000
+Best mean reward: -2.15 - Last mean reward per episode: -2.16
+Num timesteps: 68000
+Best mean reward: -2.15 - Last mean reward per episode: -2.22
+Num timesteps: 70000
+Best mean reward: -2.15 - Last mean reward per episode: -2.31
+Num timesteps: 72000
+Best mean reward: -2.15 - Last mean reward per episode: -2.44
+Num timesteps: 74000
+Best mean reward: -2.15 - Last mean reward per episode: -2.49
+Num timesteps: 76000
+Best mean reward: -2.15 - Last mean reward per episode: -2.79
+Num timesteps: 78000
+Best mean reward: -2.15 - Last mean reward per episode: -3.20
+Num timesteps: 80000
+Best mean reward: -2.15 - Last mean reward per episode: -3.02
+Num timesteps: 82000
+Best mean reward: -2.15 - Last mean reward per episode: -2.54
+Num timesteps: 84000
+Best mean reward: -2.15 - Last mean reward per episode: -2.07
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_191146_numTimesteps_84000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 86000
+Best mean reward: -2.07 - Last mean reward per episode: -2.57
+Num timesteps: 88000
+Best mean reward: -2.07 - Last mean reward per episode: -2.67
+Num timesteps: 90000
+Best mean reward: -2.07 - Last mean reward per episode: -3.93
+Num timesteps: 92000
+Best mean reward: -2.07 - Last mean reward per episode: -4.88
+Num timesteps: 94000
+Best mean reward: -2.07 - Last mean reward per episode: -5.06
+Num timesteps: 96000
+Best mean reward: -2.07 - Last mean reward per episode: -5.21
+Num timesteps: 98000
+Best mean reward: -2.07 - Last mean reward per episode: -4.90
+Num timesteps: 100000
+Best mean reward: -2.07 - Last mean reward per episode: -4.37
+Num timesteps: 102000
+Best mean reward: -2.07 - Last mean reward per episode: -4.29
+Num timesteps: 104000
+Best mean reward: -2.07 - Last mean reward per episode: -5.60
+Num timesteps: 106000
+Best mean reward: -2.07 - Last mean reward per episode: -4.35
+Num timesteps: 108000
+Best mean reward: -2.07 - Last mean reward per episode: -3.51
+Num timesteps: 110000
+Best mean reward: -2.07 - Last mean reward per episode: -3.83
+Num timesteps: 112000
+Best mean reward: -2.07 - Last mean reward per episode: -4.50
+Num timesteps: 114000
+Best mean reward: -2.07 - Last mean reward per episode: -4.34
+Num timesteps: 116000
+Best mean reward: -2.07 - Last mean reward per episode: -4.90
+Num timesteps: 118000
+Best mean reward: -2.07 - Last mean reward per episode: -4.46
+Num timesteps: 120000
+Best mean reward: -2.07 - Last mean reward per episode: -4.22
+Num timesteps: 122000
+Best mean reward: -2.07 - Last mean reward per episode: -3.89
+Num timesteps: 124000
+Best mean reward: -2.07 - Last mean reward per episode: -4.02
+Num timesteps: 126000
+Best mean reward: -2.07 - Last mean reward per episode: -3.68
+Num timesteps: 128000
+Best mean reward: -2.07 - Last mean reward per episode: -2.93
+Num timesteps: 130000
+Best mean reward: -2.07 - Last mean reward per episode: -2.52
+Num timesteps: 132000
+Best mean reward: -2.07 - Last mean reward per episode: -2.87
+Num timesteps: 134000
+Best mean reward: -2.07 - Last mean reward per episode: -3.80
+Num timesteps: 136000
+Best mean reward: -2.07 - Last mean reward per episode: -2.79
+Num timesteps: 138000
+Best mean reward: -2.07 - Last mean reward per episode: -2.38
+Num timesteps: 140000
+Best mean reward: -2.07 - Last mean reward per episode: -2.27
+Num timesteps: 142000
+Best mean reward: -2.07 - Last mean reward per episode: -3.00
+Num timesteps: 144000
+Best mean reward: -2.07 - Last mean reward per episode: -3.66
+Num timesteps: 146000
+Best mean reward: -2.07 - Last mean reward per episode: -3.73
+Num timesteps: 148000
+Best mean reward: -2.07 - Last mean reward per episode: -3.91
+Num timesteps: 150000
+Best mean reward: -2.07 - Last mean reward per episode: -3.41
+Num timesteps: 152000
+Best mean reward: -2.07 - Last mean reward per episode: -3.24
+Num timesteps: 154000
+Best mean reward: -2.07 - Last mean reward per episode: -2.80
+Num timesteps: 156000
+Best mean reward: -2.07 - Last mean reward per episode: -2.42
+Num timesteps: 158000
+Best mean reward: -2.07 - Last mean reward per episode: -2.45
+Num timesteps: 160000
+Best mean reward: -2.07 - Last mean reward per episode: -2.85
+Num timesteps: 162000
+Best mean reward: -2.07 - Last mean reward per episode: -2.94
+Num timesteps: 164000
+Best mean reward: -2.07 - Last mean reward per episode: -1.91
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_192341_numTimesteps_164000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 166000
+Best mean reward: -1.91 - Last mean reward per episode: -4.01
+Num timesteps: 168000
+Best mean reward: -1.91 - Last mean reward per episode: -4.35
+Num timesteps: 170000
+Best mean reward: -1.91 - Last mean reward per episode: -4.43
+Num timesteps: 172000
+Best mean reward: -1.91 - Last mean reward per episode: -3.07
+Num timesteps: 174000
+Best mean reward: -1.91 - Last mean reward per episode: -3.40
+Num timesteps: 176000
+Best mean reward: -1.91 - Last mean reward per episode: -3.63
+Num timesteps: 178000
+Best mean reward: -1.91 - Last mean reward per episode: -4.62
+Num timesteps: 180000
+Best mean reward: -1.91 - Last mean reward per episode: -3.96
+Num timesteps: 182000
+Best mean reward: -1.91 - Last mean reward per episode: -4.20
+Num timesteps: 184000
+Best mean reward: -1.91 - Last mean reward per episode: -3.57
+Num timesteps: 186000
+Best mean reward: -1.91 - Last mean reward per episode: -3.93
+Num timesteps: 188000
+Best mean reward: -1.91 - Last mean reward per episode: -2.79
+Num timesteps: 190000
+Best mean reward: -1.91 - Last mean reward per episode: -2.81
+Num timesteps: 192000
+Best mean reward: -1.91 - Last mean reward per episode: -3.25
+Num timesteps: 194000
+Best mean reward: -1.91 - Last mean reward per episode: -3.37
+Num timesteps: 196000
+Best mean reward: -1.91 - Last mean reward per episode: -2.94
+Num timesteps: 198000
+Best mean reward: -1.91 - Last mean reward per episode: -2.91
+Num timesteps: 200000
+Best mean reward: -1.91 - Last mean reward per episode: -2.34
+Num timesteps: 202000
+Best mean reward: -1.91 - Last mean reward per episode: -2.59
+Num timesteps: 204000
+Best mean reward: -1.91 - Last mean reward per episode: -2.48
+Num timesteps: 206000
+Best mean reward: -1.91 - Last mean reward per episode: -2.14
+Num timesteps: 208000
+Best mean reward: -1.91 - Last mean reward per episode: -2.13
+Num timesteps: 210000
+Best mean reward: -1.91 - Last mean reward per episode: -2.43
+Num timesteps: 212000
+Best mean reward: -1.91 - Last mean reward per episode: -2.02
+Num timesteps: 214000
+Best mean reward: -1.91 - Last mean reward per episode: -3.27
+Num timesteps: 216000
+Best mean reward: -1.91 - Last mean reward per episode: -3.46
+Num timesteps: 218000
+Best mean reward: -1.91 - Last mean reward per episode: -3.24
+Num timesteps: 220000
+Best mean reward: -1.91 - Last mean reward per episode: -1.92
+Num timesteps: 222000
+Best mean reward: -1.91 - Last mean reward per episode: -3.50
+Num timesteps: 224000
+Best mean reward: -1.91 - Last mean reward per episode: -6.12
+Num timesteps: 226000
+Best mean reward: -1.91 - Last mean reward per episode: -5.70
+Num timesteps: 228000
+Best mean reward: -1.91 - Last mean reward per episode: -5.08
+Num timesteps: 230000
+Best mean reward: -1.91 - Last mean reward per episode: -3.92
+Num timesteps: 232000
+Best mean reward: -1.91 - Last mean reward per episode: -3.88
+Num timesteps: 234000
+Best mean reward: -1.91 - Last mean reward per episode: -4.32
+Num timesteps: 236000
+Best mean reward: -1.91 - Last mean reward per episode: -4.25
+Num timesteps: 238000
+Best mean reward: -1.91 - Last mean reward per episode: -5.18
+Num timesteps: 240000
+Best mean reward: -1.91 - Last mean reward per episode: -4.11
+Num timesteps: 242000
+Best mean reward: -1.91 - Last mean reward per episode: -4.28
+Num timesteps: 244000
+Best mean reward: -1.91 - Last mean reward per episode: -3.89
+Num timesteps: 246000
+Best mean reward: -1.91 - Last mean reward per episode: -2.88
+Num timesteps: 248000
+Best mean reward: -1.91 - Last mean reward per episode: -2.83
+Num timesteps: 250000
+Best mean reward: -1.91 - Last mean reward per episode: -4.16
+Num timesteps: 252000
+Best mean reward: -1.91 - Last mean reward per episode: -3.81
+Num timesteps: 254000
+Best mean reward: -1.91 - Last mean reward per episode: -2.14
+Num timesteps: 256000
+Best mean reward: -1.91 - Last mean reward per episode: -2.63
+Num timesteps: 258000
+Best mean reward: -1.91 - Last mean reward per episode: -2.38
+Num timesteps: 260000
+Best mean reward: -1.91 - Last mean reward per episode: -2.85
+Num timesteps: 262000
+Best mean reward: -1.91 - Last mean reward per episode: -2.75
+Num timesteps: 264000
+Best mean reward: -1.91 - Last mean reward per episode: -3.38
+Num timesteps: 266000
+Best mean reward: -1.91 - Last mean reward per episode: -3.50
+Num timesteps: 268000
+Best mean reward: -1.91 - Last mean reward per episode: -3.74
+Num timesteps: 270000
+Best mean reward: -1.91 - Last mean reward per episode: -2.29
+Num timesteps: 272000
+Best mean reward: -1.91 - Last mean reward per episode: -1.80
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_193941_numTimesteps_272000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 274000
+Best mean reward: -1.80 - Last mean reward per episode: -1.84
+Num timesteps: 276000
+Best mean reward: -1.80 - Last mean reward per episode: -2.69
+Num timesteps: 278000
+Best mean reward: -1.80 - Last mean reward per episode: -2.67
+Num timesteps: 280000
+Best mean reward: -1.80 - Last mean reward per episode: -3.33
+Num timesteps: 282000
+Best mean reward: -1.80 - Last mean reward per episode: -3.49
+Num timesteps: 284000
+Best mean reward: -1.80 - Last mean reward per episode: -2.30
+Num timesteps: 286000
+Best mean reward: -1.80 - Last mean reward per episode: -1.75
+
+ Most recently saved model:  /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/model_20220702_194158_numTimesteps_286000 
+
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-02/SACReachSparse/callback/best_model
+Num timesteps: 288000
+Best mean reward: -1.75 - Last mean reward per episode: -2.56
+Num timesteps: 290000
+Best mean reward: -1.75 - Last mean reward per episode: -3.84
+Num timesteps: 292000
+Best mean reward: -1.75 - Last mean reward per episode: -3.13
+Num timesteps: 294000
+Best mean reward: -1.75 - Last mean reward per episode: -4.31
+Num timesteps: 296000
+Best mean reward: -1.75 - Last mean reward per episode: -4.30
+Num timesteps: 298000
+Best mean reward: -1.75 - Last mean reward per episode: -4.15
+Num timesteps: 300000
+Best mean reward: -1.75 - Last mean reward per episode: -3.72
+Num timesteps: 302000
+Best mean reward: -1.75 - Last mean reward per episode: -3.74
+Num timesteps: 304000
+Best mean reward: -1.75 - Last mean reward per episode: -3.22
+Num timesteps: 306000
+Best mean reward: -1.75 - Last mean reward per episode: -2.66
+Num timesteps: 308000
+Best mean reward: -1.75 - Last mean reward per episode: -2.60
+Num timesteps: 310000
+Best mean reward: -1.75 - Last mean reward per episode: -3.55
+Num timesteps: 312000
+Best mean reward: -1.75 - Last mean reward per episode: -3.98
+Num timesteps: 314000
+Best mean reward: -1.75 - Last mean reward per episode: -4.36
+Num timesteps: 316000
+Best mean reward: -1.75 - Last mean reward per episode: -3.40
+Num timesteps: 318000
+Best mean reward: -1.75 - Last mean reward per episode: -3.81
+Num timesteps: 320000
+Best mean reward: -1.75 - Last mean reward per episode: -2.96
+Num timesteps: 322000
+Best mean reward: -1.75 - Last mean reward per episode: -3.93
+Num timesteps: 324000
+Best mean reward: -1.75 - Last mean reward per episode: -3.64
+Num timesteps: 326000
+Best mean reward: -1.75 - Last mean reward per episode: -2.93
+Num timesteps: 328000
+Best mean reward: -1.75 - Last mean reward per episode: -2.56
+Num timesteps: 330000
+Best mean reward: -1.75 - Last mean reward per episode: -2.15
+Num timesteps: 332000
+Best mean reward: -1.75 - Last mean reward per episode: -1.83
+Num timesteps: 334000
+Best mean reward: -1.75 - Last mean reward per episode: -2.70
+Num timesteps: 336000
+Best mean reward: -1.75 - Last mean reward per episode: -3.33
+Num timesteps: 338000
+Best mean reward: -1.75 - Last mean reward per episode: -3.76
+Num timesteps: 340000
+Best mean reward: -1.75 - Last mean reward per episode: -3.31
+Num timesteps: 342000
+Best mean reward: -1.75 - Last mean reward per episode: -2.89
+Num timesteps: 344000
+Best mean reward: -1.75 - Last mean reward per episode: -3.70
+Num timesteps: 346000
+Best mean reward: -1.75 - Last mean reward per episode: -3.34
+Num timesteps: 348000
+Best mean reward: -1.75 - Last mean reward per episode: -3.23
+Num timesteps: 350000
+Best mean reward: -1.75 - Last mean reward per episode: -2.69
+Num timesteps: 352000
+Best mean reward: -1.75 - Last mean reward per episode: -2.22
+Num timesteps: 354000
+Best mean reward: -1.75 - Last mean reward per episode: -2.21
+Num timesteps: 356000
+Best mean reward: -1.75 - Last mean reward per episode: -3.20
+Num timesteps: 358000
+Best mean reward: -1.75 - Last mean reward per episode: -3.93
+Num timesteps: 360000
+Best mean reward: -1.75 - Last mean reward per episode: -3.41
+Num timesteps: 362000
+Best mean reward: -1.75 - Last mean reward per episode: -1.88
+Num timesteps: 364000
+Best mean reward: -1.75 - Last mean reward per episode: -2.18
+Num timesteps: 366000
+Best mean reward: -1.75 - Last mean reward per episode: -2.96
+Num timesteps: 368000
+Best mean reward: -1.75 - Last mean reward per episode: -3.00
+Num timesteps: 370000
+Best mean reward: -1.75 - Last mean reward per episode: -3.02
+Num timesteps: 372000
+Best mean reward: -1.75 - Last mean reward per episode: -2.39
+Num timesteps: 374000
+Best mean reward: -1.75 - Last mean reward per episode: -2.43
+Num timesteps: 376000
+Best mean reward: -1.75 - Last mean reward per episode: -2.27
+Num timesteps: 378000
+Best mean reward: -1.75 - Last mean reward per episode: -2.72
+Num timesteps: 380000
+Best mean reward: -1.75 - Last mean reward per episode: -3.98
+Num timesteps: 382000
+Best mean reward: -1.75 - Last mean reward per episode: -3.16
+Num timesteps: 384000
+Best mean reward: -1.75 - Last mean reward per episode: -3.20
+Num timesteps: 386000
+Best mean reward: -1.75 - Last mean reward per episode: -2.89
+Num timesteps: 388000
+Best mean reward: -1.75 - Last mean reward per episode: -2.44
+Num timesteps: 390000
+Best mean reward: -1.75 - Last mean reward per episode: -2.58
+Num timesteps: 392000
+Best mean reward: -1.75 - Last mean reward per episode: -2.92
+Num timesteps: 394000
+Best mean reward: -1.75 - Last mean reward per episode: -3.64
+Num timesteps: 396000
+Best mean reward: -1.75 - Last mean reward per episode: -4.02
+Num timesteps: 398000
+Best mean reward: -1.75 - Last mean reward per episode: -3.95
+Num timesteps: 400000
+Best mean reward: -1.75 - Last mean reward per episode: -3.04
+Num timesteps: 402000
+Best mean reward: -1.75 - Last mean reward per episode: -3.02
+Num timesteps: 404000
+Best mean reward: -1.75 - Last mean reward per episode: -3.58
+Num timesteps: 406000
+Best mean reward: -1.75 - Last mean reward per episode: -4.94
+Num timesteps: 408000
+Best mean reward: -1.75 - Last mean reward per episode: -4.60
+Num timesteps: 410000
+Best mean reward: -1.75 - Last mean reward per episode: -4.53
+Num timesteps: 412000
+Best mean reward: -1.75 - Last mean reward per episode: -3.26
+Num timesteps: 414000
+Best mean reward: -1.75 - Last mean reward per episode: -2.62
+Num timesteps: 416000
+Best mean reward: -1.75 - Last mean reward per episode: -3.36
+Num timesteps: 418000
+Best mean reward: -1.75 - Last mean reward per episode: -2.84
+Num timesteps: 420000
+Best mean reward: -1.75 - Last mean reward per episode: -2.61
+Num timesteps: 422000
+Best mean reward: -1.75 - Last mean reward per episode: -2.84
+Num timesteps: 424000
+Best mean reward: -1.75 - Last mean reward per episode: -3.53
+Num timesteps: 426000
+Best mean reward: -1.75 - Last mean reward per episode: -3.88
+Num timesteps: 428000
+Best mean reward: -1.75 - Last mean reward per episode: -3.73
+Num timesteps: 430000
+Best mean reward: -1.75 - Last mean reward per episode: -3.28
+Num timesteps: 432000
+Best mean reward: -1.75 - Last mean reward per episode: -2.35
+Num timesteps: 434000
+Best mean reward: -1.75 - Last mean reward per episode: -2.33
+Num timesteps: 436000
+Best mean reward: -1.75 - Last mean reward per episode: -2.92
+Num timesteps: 438000
+Best mean reward: -1.75 - Last mean reward per episode: -2.93
+Num timesteps: 440000
+Best mean reward: -1.75 - Last mean reward per episode: -1.90
+Num timesteps: 442000
+Best mean reward: -1.75 - Last mean reward per episode: -1.91
+Num timesteps: 444000
+Best mean reward: -1.75 - Last mean reward per episode: -2.37
+Num timesteps: 446000
+Best mean reward: -1.75 - Last mean reward per episode: -3.06
+Num timesteps: 448000
+Best mean reward: -1.75 - Last mean reward per episode: -3.55
+Num timesteps: 450000
+Best mean reward: -1.75 - Last mean reward per episode: -2.74
+Num timesteps: 452000
+Best mean reward: -1.75 - Last mean reward per episode: -3.58
+Num timesteps: 454000
+Best mean reward: -1.75 - Last mean reward per episode: -3.05
+Num timesteps: 456000
+Best mean reward: -1.75 - Last mean reward per episode: -2.99
+Num timesteps: 458000
+Best mean reward: -1.75 - Last mean reward per episode: -2.67
+Num timesteps: 460000
+Best mean reward: -1.75 - Last mean reward per episode: -3.03
+Num timesteps: 462000
+Best mean reward: -1.75 - Last mean reward per episode: -3.03
+Num timesteps: 464000
+Best mean reward: -1.75 - Last mean reward per episode: -2.54
+Num timesteps: 466000
+Best mean reward: -1.75 - Last mean reward per episode: -2.97
+Num timesteps: 468000
+Best mean reward: -1.75 - Last mean reward per episode: -3.41
+Num timesteps: 470000
+Best mean reward: -1.75 - Last mean reward per episode: -3.42
+Num timesteps: 472000
+Best mean reward: -1.75 - Last mean reward per episode: -3.24
+Num timesteps: 474000
+Best mean reward: -1.75 - Last mean reward per episode: -3.67
+Num timesteps: 476000
+Best mean reward: -1.75 - Last mean reward per episode: -2.68
+Num timesteps: 478000
+Best mean reward: -1.75 - Last mean reward per episode: -2.11
+Num timesteps: 480000
+Best mean reward: -1.75 - Last mean reward per episode: -2.10
+Num timesteps: 482000
+Best mean reward: -1.75 - Last mean reward per episode: -3.28
+Num timesteps: 484000
+Best mean reward: -1.75 - Last mean reward per episode: -3.24
+Num timesteps: 486000
+Best mean reward: -1.75 - Last mean reward per episode: -3.81
+Num timesteps: 488000
+Best mean reward: -1.75 - Last mean reward per episode: -3.66
+Num timesteps: 490000
+Best mean reward: -1.75 - Last mean reward per episode: -2.97
+Num timesteps: 492000
+Best mean reward: -1.75 - Last mean reward per episode: -2.51
+Num timesteps: 494000
+Best mean reward: -1.75 - Last mean reward per episode: -2.90
+Num timesteps: 496000
+Best mean reward: -1.75 - Last mean reward per episode: -2.76
+Num timesteps: 498000
+Best mean reward: -1.75 - Last mean reward per episode: -3.14
+Num timesteps: 500000
+Best mean reward: -1.75 - Last mean reward per episode: -3.92
+Num timesteps: 502000
+Best mean reward: -1.75 - Last mean reward per episode: -2.70
+Num timesteps: 504000
+Best mean reward: -1.75 - Last mean reward per episode: -2.38
+Num timesteps: 506000
+Best mean reward: -1.75 - Last mean reward per episode: -3.28
+Num timesteps: 508000
+Best mean reward: -1.75 - Last mean reward per episode: -3.17
+Num timesteps: 510000
+Best mean reward: -1.75 - Last mean reward per episode: -3.46
+Num timesteps: 512000
+Best mean reward: -1.75 - Last mean reward per episode: -3.12
+Num timesteps: 514000
+Best mean reward: -1.75 - Last mean reward per episode: -2.70
+Num timesteps: 516000
+Best mean reward: -1.75 - Last mean reward per episode: -2.03
+Num timesteps: 518000
+Best mean reward: -1.75 - Last mean reward per episode: -1.97
+Num timesteps: 520000
+Best mean reward: -1.75 - Last mean reward per episode: -2.59
+Num timesteps: 522000
+Best mean reward: -1.75 - Last mean reward per episode: -2.61
+Num timesteps: 524000
+Best mean reward: -1.75 - Last mean reward per episode: -2.68
+Num timesteps: 526000
+Best mean reward: -1.75 - Last mean reward per episode: -3.59
+Num timesteps: 528000
+Best mean reward: -1.75 - Last mean reward per episode: -4.87
+Num timesteps: 530000
+Best mean reward: -1.75 - Last mean reward per episode: -5.00
+Num timesteps: 532000
+Best mean reward: -1.75 - Last mean reward per episode: -4.58
+Num timesteps: 534000
+Best mean reward: -1.75 - Last mean reward per episode: -3.36
+Num timesteps: 536000
+Best mean reward: -1.75 - Last mean reward per episode: -3.18
+Num timesteps: 538000
+Best mean reward: -1.75 - Last mean reward per episode: -2.82
+Num timesteps: 540000
+Best mean reward: -1.75 - Last mean reward per episode: -3.09
+Num timesteps: 542000
+Best mean reward: -1.75 - Last mean reward per episode: -3.43
+Num timesteps: 544000
+Best mean reward: -1.75 - Last mean reward per episode: -3.20
+Num timesteps: 546000
+Best mean reward: -1.75 - Last mean reward per episode: -2.41
+Num timesteps: 548000
+Best mean reward: -1.75 - Last mean reward per episode: -4.05
+Num timesteps: 550000
+Best mean reward: -1.75 - Last mean reward per episode: -5.54
+Num timesteps: 552000
+Best mean reward: -1.75 - Last mean reward per episode: -4.82
+Num timesteps: 554000
+Best mean reward: -1.75 - Last mean reward per episode: -3.95
+Num timesteps: 556000
+Best mean reward: -1.75 - Last mean reward per episode: -4.06
+Num timesteps: 558000
+Best mean reward: -1.75 - Last mean reward per episode: -3.23
+Num timesteps: 560000
+Best mean reward: -1.75 - Last mean reward per episode: -2.06
+Num timesteps: 562000
+Best mean reward: -1.75 - Last mean reward per episode: -2.61
+Num timesteps: 564000
+Best mean reward: -1.75 - Last mean reward per episode: -4.02
+Num timesteps: 566000
+Best mean reward: -1.75 - Last mean reward per episode: -4.67
+Num timesteps: 568000
+Best mean reward: -1.75 - Last mean reward per episode: -4.48
+Num timesteps: 570000
+Best mean reward: -1.75 - Last mean reward per episode: -3.54
+Num timesteps: 572000
+Best mean reward: -1.75 - Last mean reward per episode: -3.67
+Num timesteps: 574000
+Best mean reward: -1.75 - Last mean reward per episode: -3.55
+Num timesteps: 576000
+Best mean reward: -1.75 - Last mean reward per episode: -3.23
+Num timesteps: 578000
+Best mean reward: -1.75 - Last mean reward per episode: -2.31
+Num timesteps: 580000
+Best mean reward: -1.75 - Last mean reward per episode: -2.22
+Num timesteps: 582000
+Best mean reward: -1.75 - Last mean reward per episode: -2.28
+Num timesteps: 584000
+Best mean reward: -1.75 - Last mean reward per episode: -3.50
+Num timesteps: 586000
+Best mean reward: -1.75 - Last mean reward per episode: -3.15
+Num timesteps: 588000
+Best mean reward: -1.75 - Last mean reward per episode: -3.23
+Num timesteps: 590000
+Best mean reward: -1.75 - Last mean reward per episode: -2.40
+Num timesteps: 592000
+Best mean reward: -1.75 - Last mean reward per episode: -3.40
+Num timesteps: 594000
+Best mean reward: -1.75 - Last mean reward per episode: -3.28
+Num timesteps: 596000
+Best mean reward: -1.75 - Last mean reward per episode: -3.40
+Num timesteps: 598000
+Best mean reward: -1.75 - Last mean reward per episode: -4.81
+Num timesteps: 600000
+Best mean reward: -1.75 - Last mean reward per episode: -4.99
+Num timesteps: 602000
+Best mean reward: -1.75 - Last mean reward per episode: -5.07
+Num timesteps: 604000
+Best mean reward: -1.75 - Last mean reward per episode: -3.08
+Num timesteps: 606000
+Best mean reward: -1.75 - Last mean reward per episode: -3.32
+Num timesteps: 608000
+Best mean reward: -1.75 - Last mean reward per episode: -2.84
+Num timesteps: 610000
+Best mean reward: -1.75 - Last mean reward per episode: -3.67
+Num timesteps: 612000
+Best mean reward: -1.75 - Last mean reward per episode: -2.93
+Num timesteps: 614000
+Best mean reward: -1.75 - Last mean reward per episode: -3.45
+Num timesteps: 616000
+Best mean reward: -1.75 - Last mean reward per episode: -4.03
+Num timesteps: 618000
+Best mean reward: -1.75 - Last mean reward per episode: -4.98
+Num timesteps: 620000
+Best mean reward: -1.75 - Last mean reward per episode: -4.79
+Num timesteps: 622000
+Best mean reward: -1.75 - Last mean reward per episode: -5.67
+Num timesteps: 624000
+Best mean reward: -1.75 - Last mean reward per episode: -4.09
+Num timesteps: 626000
+Best mean reward: -1.75 - Last mean reward per episode: -2.57
+Num timesteps: 628000
+Best mean reward: -1.75 - Last mean reward per episode: -2.56
+Num timesteps: 630000
+Best mean reward: -1.75 - Last mean reward per episode: -2.67
+Num timesteps: 632000
+Best mean reward: -1.75 - Last mean reward per episode: -2.38
+Num timesteps: 634000
+Best mean reward: -1.75 - Last mean reward per episode: -2.52
+Num timesteps: 636000
+Best mean reward: -1.75 - Last mean reward per episode: -1.87
+Num timesteps: 638000
+Best mean reward: -1.75 - Last mean reward per episode: -1.87
+Num timesteps: 640000
+Best mean reward: -1.75 - Last mean reward per episode: -1.76
+Num timesteps: 642000
+Best mean reward: -1.75 - Last mean reward per episode: -2.28
+Num timesteps: 644000
+Best mean reward: -1.75 - Last mean reward per episode: -3.21
+Num timesteps: 646000
+Best mean reward: -1.75 - Last mean reward per episode: -4.05
+Num timesteps: 648000
+Best mean reward: -1.75 - Last mean reward per episode: -4.38
+Num timesteps: 650000
+Best mean reward: -1.75 - Last mean reward per episode: -4.10
+Num timesteps: 652000
+Best mean reward: -1.75 - Last mean reward per episode: -3.53
+Num timesteps: 654000
+Best mean reward: -1.75 - Last mean reward per episode: -2.46
+Num timesteps: 656000
+Best mean reward: -1.75 - Last mean reward per episode: -2.82
+Num timesteps: 658000
+Best mean reward: -1.75 - Last mean reward per episode: -3.38
+Num timesteps: 660000
+Best mean reward: -1.75 - Last mean reward per episode: -3.16
+Num timesteps: 662000
+Best mean reward: -1.75 - Last mean reward per episode: -3.51
+Num timesteps: 664000
+Best mean reward: -1.75 - Last mean reward per episode: -3.97
+Num timesteps: 666000
+Best mean reward: -1.75 - Last mean reward per episode: -3.33
+Num timesteps: 668000
+Best mean reward: -1.75 - Last mean reward per episode: -2.33
+Num timesteps: 670000
+Best mean reward: -1.75 - Last mean reward per episode: -2.62
+Num timesteps: 672000
+Best mean reward: -1.75 - Last mean reward per episode: -3.44
+Num timesteps: 674000
+Best mean reward: -1.75 - Last mean reward per episode: -4.04
+Num timesteps: 676000
+Best mean reward: -1.75 - Last mean reward per episode: -3.36
+Num timesteps: 678000
+Best mean reward: -1.75 - Last mean reward per episode: -2.39
+Num timesteps: 680000
+Best mean reward: -1.75 - Last mean reward per episode: -3.17
+Num timesteps: 682000
+Best mean reward: -1.75 - Last mean reward per episode: -4.23
+Num timesteps: 684000
+Best mean reward: -1.75 - Last mean reward per episode: -4.47
+Num timesteps: 686000
+Best mean reward: -1.75 - Last mean reward per episode: -4.14
+Num timesteps: 688000
+Best mean reward: -1.75 - Last mean reward per episode: -4.54
+Num timesteps: 690000
+Best mean reward: -1.75 - Last mean reward per episode: -2.30
+Num timesteps: 692000
+Best mean reward: -1.75 - Last mean reward per episode: -3.23
+Num timesteps: 694000
+Best mean reward: -1.75 - Last mean reward per episode: -3.28
+Num timesteps: 696000
+Best mean reward: -1.75 - Last mean reward per episode: -3.85
+Num timesteps: 698000
+Best mean reward: -1.75 - Last mean reward per episode: -3.49
+Num timesteps: 700000
+Best mean reward: -1.75 - Last mean reward per episode: -2.30
+Num timesteps: 702000
+Best mean reward: -1.75 - Last mean reward per episode: -2.21
+Num timesteps: 704000
+Best mean reward: -1.75 - Last mean reward per episode: -2.65
+Num timesteps: 706000
+Best mean reward: -1.75 - Last mean reward per episode: -3.29
+Num timesteps: 708000
+Best mean reward: -1.75 - Last mean reward per episode: -3.96
+Num timesteps: 710000
+Best mean reward: -1.75 - Last mean reward per episode: -4.12
+Num timesteps: 712000
+Best mean reward: -1.75 - Last mean reward per episode: -3.44
+Num timesteps: 714000
+Best mean reward: -1.75 - Last mean reward per episode: -2.15
+Num timesteps: 716000
+Best mean reward: -1.75 - Last mean reward per episode: -2.00
+Num timesteps: 718000
+Best mean reward: -1.75 - Last mean reward per episode: -2.37
+Num timesteps: 720000
+Best mean reward: -1.75 - Last mean reward per episode: -3.55
+Num timesteps: 722000
+Best mean reward: -1.75 - Last mean reward per episode: -4.02
+Num timesteps: 724000
+Best mean reward: -1.75 - Last mean reward per episode: -2.82
+Num timesteps: 726000
+Best mean reward: -1.75 - Last mean reward per episode: -2.35
+Num timesteps: 728000
+Best mean reward: -1.75 - Last mean reward per episode: -2.45
+Num timesteps: 730000
+Best mean reward: -1.75 - Last mean reward per episode: -2.85
+Num timesteps: 732000
+Best mean reward: -1.75 - Last mean reward per episode: -2.36
+Num timesteps: 734000
+Best mean reward: -1.75 - Last mean reward per episode: -2.24
+Num timesteps: 736000
+Best mean reward: -1.75 - Last mean reward per episode: -2.74
+Num timesteps: 738000
+Best mean reward: -1.75 - Last mean reward per episode: -3.61
+Num timesteps: 740000
+Best mean reward: -1.75 - Last mean reward per episode: -4.04
+Num timesteps: 742000
+Best mean reward: -1.75 - Last mean reward per episode: -3.10
+Num timesteps: 744000
+Best mean reward: -1.75 - Last mean reward per episode: -3.67
+Num timesteps: 746000
+Best mean reward: -1.75 - Last mean reward per episode: -3.50
+Num timesteps: 748000
+Best mean reward: -1.75 - Last mean reward per episode: -2.91
+Num timesteps: 750000
+Best mean reward: -1.75 - Last mean reward per episode: -2.34
+Num timesteps: 752000
+Best mean reward: -1.75 - Last mean reward per episode: -2.70
+Num timesteps: 754000
+Best mean reward: -1.75 - Last mean reward per episode: -2.72
+Num timesteps: 756000
+Best mean reward: -1.75 - Last mean reward per episode: -2.87
+Num timesteps: 758000
+Best mean reward: -1.75 - Last mean reward per episode: -2.89
+Num timesteps: 760000
+Best mean reward: -1.75 - Last mean reward per episode: -2.23
+Num timesteps: 762000
+Best mean reward: -1.75 - Last mean reward per episode: -1.93
+Num timesteps: 764000
+Best mean reward: -1.75 - Last mean reward per episode: -2.61
+Num timesteps: 766000
+Best mean reward: -1.75 - Last mean reward per episode: -2.99
+Num timesteps: 768000
+Best mean reward: -1.75 - Last mean reward per episode: -3.10
+Num timesteps: 770000
+Best mean reward: -1.75 - Last mean reward per episode: -3.66
+Num timesteps: 772000
+Best mean reward: -1.75 - Last mean reward per episode: -3.22
+Num timesteps: 774000
+Best mean reward: -1.75 - Last mean reward per episode: -2.83
+Num timesteps: 776000
+Best mean reward: -1.75 - Last mean reward per episode: -3.43
+Num timesteps: 778000
+Best mean reward: -1.75 - Last mean reward per episode: -3.87
+Num timesteps: 780000
+Best mean reward: -1.75 - Last mean reward per episode: -3.95
+Num timesteps: 782000
+Best mean reward: -1.75 - Last mean reward per episode: -3.41
+Num timesteps: 784000
+Best mean reward: -1.75 - Last mean reward per episode: -3.32
+Num timesteps: 786000
+Best mean reward: -1.75 - Last mean reward per episode: -2.98
+Num timesteps: 788000
+Best mean reward: -1.75 - Last mean reward per episode: -3.97
+Num timesteps: 790000
+Best mean reward: -1.75 - Last mean reward per episode: -3.61
+Num timesteps: 792000
+Best mean reward: -1.75 - Last mean reward per episode: -3.25
+Num timesteps: 794000
+Best mean reward: -1.75 - Last mean reward per episode: -3.86
+Num timesteps: 796000
+Best mean reward: -1.75 - Last mean reward per episode: -2.74
+Num timesteps: 798000
+Best mean reward: -1.75 - Last mean reward per episode: -2.72
+Num timesteps: 800000
+Best mean reward: -1.75 - Last mean reward per episode: -2.62
+Num timesteps: 802000
+Best mean reward: -1.75 - Last mean reward per episode: -3.35
+Num timesteps: 804000
+Best mean reward: -1.75 - Last mean reward per episode: -3.79
+Num timesteps: 806000
+Best mean reward: -1.75 - Last mean reward per episode: -4.47
+Num timesteps: 808000
+Best mean reward: -1.75 - Last mean reward per episode: -4.18
+Num timesteps: 810000
+Best mean reward: -1.75 - Last mean reward per episode: -4.00
+Num timesteps: 812000
+Best mean reward: -1.75 - Last mean reward per episode: -3.32
+Num timesteps: 814000
+Best mean reward: -1.75 - Last mean reward per episode: -3.12
+Num timesteps: 816000
+Best mean reward: -1.75 - Last mean reward per episode: -3.14
+Num timesteps: 818000
+Best mean reward: -1.75 - Last mean reward per episode: -3.96
+Num timesteps: 820000
+Best mean reward: -1.75 - Last mean reward per episode: -4.18
+Num timesteps: 822000
+Best mean reward: -1.75 - Last mean reward per episode: -3.93
+Num timesteps: 824000
+Best mean reward: -1.75 - Last mean reward per episode: -3.78
+Num timesteps: 826000
+Best mean reward: -1.75 - Last mean reward per episode: -3.45
+Num timesteps: 828000
+Best mean reward: -1.75 - Last mean reward per episode: -2.20
+Num timesteps: 830000
+Best mean reward: -1.75 - Last mean reward per episode: -2.15
+Num timesteps: 832000
+Best mean reward: -1.75 - Last mean reward per episode: -2.11
+Num timesteps: 834000
+Best mean reward: -1.75 - Last mean reward per episode: -2.53
+Num timesteps: 836000
+Best mean reward: -1.75 - Last mean reward per episode: -3.80
+Num timesteps: 838000
+Best mean reward: -1.75 - Last mean reward per episode: -4.30
+Num timesteps: 840000
+Best mean reward: -1.75 - Last mean reward per episode: -4.40
+Num timesteps: 842000
+Best mean reward: -1.75 - Last mean reward per episode: -4.65
+Num timesteps: 844000
+Best mean reward: -1.75 - Last mean reward per episode: -3.48
+Num timesteps: 846000
+Best mean reward: -1.75 - Last mean reward per episode: -3.66
+Num timesteps: 848000
+Best mean reward: -1.75 - Last mean reward per episode: -4.42
+Num timesteps: 850000
+Best mean reward: -1.75 - Last mean reward per episode: -3.99
+Num timesteps: 852000
+Best mean reward: -1.75 - Last mean reward per episode: -5.11
+Num timesteps: 854000
+Best mean reward: -1.75 - Last mean reward per episode: -5.24
+Num timesteps: 856000
+Best mean reward: -1.75 - Last mean reward per episode: -3.87
+Num timesteps: 858000
+Best mean reward: -1.75 - Last mean reward per episode: -3.50
+Num timesteps: 860000
+Best mean reward: -1.75 - Last mean reward per episode: -2.24
+Num timesteps: 862000
+Best mean reward: -1.75 - Last mean reward per episode: -2.58
+Num timesteps: 864000
+Best mean reward: -1.75 - Last mean reward per episode: -3.20
+Num timesteps: 866000
+Best mean reward: -1.75 - Last mean reward per episode: -3.25
+Num timesteps: 868000
+Best mean reward: -1.75 - Last mean reward per episode: -3.59
+Num timesteps: 870000
+Best mean reward: -1.75 - Last mean reward per episode: -4.17
+Num timesteps: 872000
+Best mean reward: -1.75 - Last mean reward per episode: -3.88
+Num timesteps: 874000
+Best mean reward: -1.75 - Last mean reward per episode: -2.99
+Num timesteps: 876000
+Best mean reward: -1.75 - Last mean reward per episode: -3.96
+Num timesteps: 878000
+Best mean reward: -1.75 - Last mean reward per episode: -4.38
+Num timesteps: 880000
+Best mean reward: -1.75 - Last mean reward per episode: -3.56
+Num timesteps: 882000
+Best mean reward: -1.75 - Last mean reward per episode: -3.43
+Num timesteps: 884000
+Best mean reward: -1.75 - Last mean reward per episode: -3.32
+Num timesteps: 886000
+Best mean reward: -1.75 - Last mean reward per episode: -2.84
+Num timesteps: 888000
+Best mean reward: -1.75 - Last mean reward per episode: -2.26
+Num timesteps: 890000
+Best mean reward: -1.75 - Last mean reward per episode: -1.92
+Num timesteps: 892000
+Best mean reward: -1.75 - Last mean reward per episode: -1.86
+Num timesteps: 894000
+Best mean reward: -1.75 - Last mean reward per episode: -1.83
+Num timesteps: 896000
+Best mean reward: -1.75 - Last mean reward per episode: -2.20
+Num timesteps: 898000
+Best mean reward: -1.75 - Last mean reward per episode: -2.12
+Num timesteps: 900000
+Best mean reward: -1.75 - Last mean reward per episode: -3.56
+Num timesteps: 902000
+Best mean reward: -1.75 - Last mean reward per episode: -4.53
+Num timesteps: 904000
+Best mean reward: -1.75 - Last mean reward per episode: -5.86
+Num timesteps: 906000
+Best mean reward: -1.75 - Last mean reward per episode: -5.51
+Num timesteps: 908000
+Best mean reward: -1.75 - Last mean reward per episode: -5.21
+Num timesteps: 910000
+Best mean reward: -1.75 - Last mean reward per episode: -4.07
+Num timesteps: 912000
+Best mean reward: -1.75 - Last mean reward per episode: -2.78
+Num timesteps: 914000
+Best mean reward: -1.75 - Last mean reward per episode: -1.95
+Num timesteps: 916000
+Best mean reward: -1.75 - Last mean reward per episode: -2.76
+Num timesteps: 918000
+Best mean reward: -1.75 - Last mean reward per episode: -3.63
+Num timesteps: 920000
+Best mean reward: -1.75 - Last mean reward per episode: -3.59
+Num timesteps: 922000
+Best mean reward: -1.75 - Last mean reward per episode: -3.38
+Num timesteps: 924000
+Best mean reward: -1.75 - Last mean reward per episode: -2.87
+Num timesteps: 926000
+Best mean reward: -1.75 - Last mean reward per episode: -3.03
+Num timesteps: 928000
+Best mean reward: -1.75 - Last mean reward per episode: -3.09
+Num timesteps: 930000
+Best mean reward: -1.75 - Last mean reward per episode: -2.99
+Num timesteps: 932000
+Best mean reward: -1.75 - Last mean reward per episode: -3.88
+Num timesteps: 934000
+Best mean reward: -1.75 - Last mean reward per episode: -3.79
+Num timesteps: 936000
+Best mean reward: -1.75 - Last mean reward per episode: -3.54
+Num timesteps: 938000
+Best mean reward: -1.75 - Last mean reward per episode: -3.02
+Num timesteps: 940000
+Best mean reward: -1.75 - Last mean reward per episode: -2.94
+Num timesteps: 942000
+Best mean reward: -1.75 - Last mean reward per episode: -3.88
+Num timesteps: 944000
+Best mean reward: -1.75 - Last mean reward per episode: -3.42
+Num timesteps: 946000
+Best mean reward: -1.75 - Last mean reward per episode: -2.83
+Num timesteps: 948000
+Best mean reward: -1.75 - Last mean reward per episode: -2.71
+Num timesteps: 950000
+Best mean reward: -1.75 - Last mean reward per episode: -2.88
+Num timesteps: 952000
+Best mean reward: -1.75 - Last mean reward per episode: -2.90
+Num timesteps: 954000
+Best mean reward: -1.75 - Last mean reward per episode: -2.24
+Num timesteps: 956000
+Best mean reward: -1.75 - Last mean reward per episode: -3.08
+Num timesteps: 958000
+Best mean reward: -1.75 - Last mean reward per episode: -4.06
+Num timesteps: 960000
+Best mean reward: -1.75 - Last mean reward per episode: -3.67
+Num timesteps: 962000
+Best mean reward: -1.75 - Last mean reward per episode: -2.83
+Num timesteps: 964000
+Best mean reward: -1.75 - Last mean reward per episode: -2.40
+Num timesteps: 966000
+Best mean reward: -1.75 - Last mean reward per episode: -2.04
+Num timesteps: 968000
+Best mean reward: -1.75 - Last mean reward per episode: -2.02
+Num timesteps: 970000
+Best mean reward: -1.75 - Last mean reward per episode: -2.35
+Num timesteps: 972000
+Best mean reward: -1.75 - Last mean reward per episode: -3.59
+Num timesteps: 974000
+Best mean reward: -1.75 - Last mean reward per episode: -4.21
+Num timesteps: 976000
+Best mean reward: -1.75 - Last mean reward per episode: -3.72
+Num timesteps: 978000
+Best mean reward: -1.75 - Last mean reward per episode: -2.67
+Num timesteps: 980000
+Best mean reward: -1.75 - Last mean reward per episode: -1.86
+Num timesteps: 982000
+Best mean reward: -1.75 - Last mean reward per episode: -2.69
+Num timesteps: 984000
+Best mean reward: -1.75 - Last mean reward per episode: -2.88
+Num timesteps: 986000
+Best mean reward: -1.75 - Last mean reward per episode: -3.32
+Num timesteps: 988000
+Best mean reward: -1.75 - Last mean reward per episode: -3.47
+Num timesteps: 990000
+Best mean reward: -1.75 - Last mean reward per episode: -3.73
+Num timesteps: 992000
+Best mean reward: -1.75 - Last mean reward per episode: -3.63
+Num timesteps: 994000
+Best mean reward: -1.75 - Last mean reward per episode: -2.68
+Num timesteps: 996000
+Best mean reward: -1.75 - Last mean reward per episode: -2.40
+Num timesteps: 998000
+Best mean reward: -1.75 - Last mean reward per episode: -3.01
+Num timesteps: 1000000
+Best mean reward: -1.75 - Last mean reward per episode: -3.12
+Traceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/mainSACVec.py", line 121, in <module>
+    
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/base_class.py", line 730, in load
+    model._setup_model()
+  File "/home/hjkwon/anacond

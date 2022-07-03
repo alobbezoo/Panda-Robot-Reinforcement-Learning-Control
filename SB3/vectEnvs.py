@@ -1,12 +1,56 @@
-
-from wrappers.pandaWrapperBW_D import PandaWrapper
+# from wrappers.pandaWrapperBW_D import PandaWrapper
 from typing import Any, Callable, Dict, Optional, Type, Union
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv, VecEnv
 import gym
 from stable_baselines3.common.env_util import make_vec_env
+from stable_baselines3.common.atari_wrappers import MaxAndSkipEnv
+from wrappers.pandaWrapperBW_D import PandaWrapper
+
+
+class PandaTopWrapper(gym.Wrapper):
+    """
+    Panda preprocessings
+    Specifically:
+    * NoopReset: obtain initial state by taking random number of no-ops on reset.
+    * Frame skipping: 4 by default
+    * Max-pooling: most recent two observations
+    * Termination signal when a life is lost.
+    * Resize to a square image: 84x84 by default
+    * Grayscale observation
+    * Clip reward to {-1, 0, 1}
+    :param env: gym environment
+    :param noop_max: max number of no-ops
+    :param frame_skip: the frequency at which the agent experiences the game.
+    :param screen_size: resize Atari frame
+    :param terminal_on_life_loss: if True, then step() returns done=True whenever a life is lost.
+    :param clip_reward: If True (default), the reward is clip to {-1, 0, 1} depending on its sign.
+    """
+
+    def __init__(
+        self,
+        env: gym.Env,
+        base_wrapper=PandaWrapper,
+        # noop_max: int = 30,
+        frame_skip: int = 4,
+        # screen_size: int = 84,
+        # terminal_on_life_loss: bool = True,
+        # clip_reward: bool = True,
+    ):
+        env = base_wrapper(env)
+        env = MaxAndSkipEnv(env, skip=frame_skip)
+        # if terminal_on_life_loss:
+        #     env = EpisodicLifeEnv(env)
+        # if "FIRE" in env.unwrapped.get_action_meanings():
+        #     env = FireResetEnv(env)
+        # env = WarpFrame(env, width=screen_size, height=screen_size)
+        # if clip_reward:
+        #     env = ClipRewardEnv(env)
+
+        super().__init__(env)
 
 def make_panda_env(
     env_id: Union[str, Type[gym.Env]],
+    wrapper = PandaTopWrapper, 
     n_envs: int = 1,
     seed: Optional[int] = None,
     start_index: int = 0,
@@ -16,6 +60,7 @@ def make_panda_env(
     vec_env_cls: Optional[Union[DummyVecEnv, SubprocVecEnv]] = None,
     vec_env_kwargs: Optional[Dict[str, Any]] = None,
     monitor_kwargs: Optional[Dict[str, Any]] = None,
+    
 ) -> VecEnv:
     """
     Create a wrapped, monitored VecEnv for Atari.
@@ -39,8 +84,9 @@ def make_panda_env(
         wrapper_kwargs = {}
 
     def panda_wrapper(env: gym.Env) -> gym.Env:
-        env = PandaWrapper(env, **wrapper_kwargs)
+        env = wrapper(env, **wrapper_kwargs)
         return env
+    
 
     return make_vec_env(
         env_id,
@@ -54,3 +100,5 @@ def make_panda_env(
         vec_env_kwargs=vec_env_kwargs,
         monitor_kwargs=monitor_kwargs,
     )
+
+

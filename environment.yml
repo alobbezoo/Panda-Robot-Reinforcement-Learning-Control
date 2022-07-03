@@ -1,0 +1,19 @@
+name: panda_rl_env
+
+dependencies:
+  - python=3.9
+  - pytorch=22
+  - stable-baselines3=1.4
+  - optuna=2.10
+  - gym=0.19
+  - panda-gym=2.0
+  - plotly=2.7 
+  - optuna=2.10
+  - torchaudio=1.12.0
+  - torchvision=0.13.0
+  - pip
+  - matplotlib=3.5.1
+  - matplotlib-base=3.5.1
+  - ipython=7.31
+  - pip:
+    - numpy=1.21.*

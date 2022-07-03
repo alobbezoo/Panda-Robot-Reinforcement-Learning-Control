@@ -1,7 +1,9 @@
-from panda_gym.envs.tasks.reach import Reach
+# from panda_gym.envs.tasks.reach import Reach
 from panda_gym.envs.core import RobotTaskEnv
 from env.pandaCust import Panda
 from env.pybulletCust import PyBullet
+from env.pandaReach import Reach
+
 import numpy as np
 
 class PandaReachDepth(RobotTaskEnv):
@@ -16,5 +18,5 @@ class PandaReachDepth(RobotTaskEnv):
     def __init__(self, render: bool = False, reward_type: str = "sparse", control_type: str = "ee") -> None:
         sim = PyBullet(render=render)
         robot = Panda(sim, block_gripper=True, base_position=np.array([-0.6, 0.0, 0.0]), control_type=control_type)
-        task = Reach(sim, reward_type=reward_type, get_ee_position=robot.get_ee_position)
+        task = Reach(sim=sim, reward_type=reward_type, get_ee_position=robot.get_ee_position)
         super().__init__(robot, task)

@@ -5,7 +5,11 @@ from gym.envs.registration import register
 
 from env.pandareachdepth import PandaReachDepth
 from env.pandagraspdepth import PandaGraspDepth
+from env.pandagraspdepthnowalls import PandaGraspDepthNoWalls
 from env.pandapickandplacedepth import PandaPickAndPlaceDepth
+from env.pandagraspblockdepth import PandaGraspBlockDepth
+from env.pandapickandplaceblockdepth import PandaPickAndPlaceBlockDepth
+from env.pandapickandplacenowallsdepth import PandaPickAndPlaceNoWallsDepth
 
 for reward_type in ["sparse", "dense"]:
     for control_type in ["ee", "joints"]:
@@ -26,6 +30,20 @@ for reward_type in ["sparse", "dense"]:
             kwargs=kwargs,
             max_episode_steps=50,
         )
+
+        register(
+            id="PandaGraspNoWallsDepth{}{}-v1".format(control_suffix, reward_suffix),
+            entry_point=PandaGraspDepthNoWalls, 
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
+
+        register(
+            id="PandaGraspDepthBlock{}{}-v1".format(control_suffix, reward_suffix),
+            entry_point=PandaGraspBlockDepth, 
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
         
         register(
             id="PandaPickAndPlaceDepth{}{}-v1".format(control_suffix, reward_suffix),
@@ -33,3 +51,19 @@ for reward_type in ["sparse", "dense"]:
             kwargs=kwargs,
             max_episode_steps=50,
         )
+
+        register(
+            id="PandaPickAndPlaceNoWallsDepth{}{}-v1".format(control_suffix, reward_suffix),
+            entry_point=PandaPickAndPlaceNoWallsDepth, 
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
+
+        
+        register(
+            id="PandaPickAndPlaceDepthBlock{}{}-v1".format(control_suffix, reward_suffix),
+            entry_point=PandaPickAndPlaceBlockDepth, 
+            kwargs=kwargs,
+            max_episode_steps=50,
+        )
+

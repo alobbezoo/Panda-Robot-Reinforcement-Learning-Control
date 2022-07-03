@@ -68,6 +68,7 @@ class PyBullet:
         yaw: float = 45,
         pitch: float = -30,
         roll: float = 0,
+        
     ) -> Optional[np.ndarray]:
         """Render.
         If mode is "human", make the rendering real-time. All other arguments are

@@ -132,8 +132,3 @@ class TrainOpt():
         for _ in range(video_length):
             action, _ = self.model.predict(obs)
             obs, _, _, _ = eval_env.step(action)
-
-        # Close the video recorder
-        eval_env.close()
-    
-
