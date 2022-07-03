@@ -9,6 +9,10 @@ import gym
 import numpy as np
 import os
 
+from datetime import datetime
+date = datetime.now().date() 
+
+
 class SaveOnBestTrainingRewardCallback(BaseCallback):
     """
     Callback for saving a model (the check is done every ``check_freq`` steps)
@@ -42,12 +46,21 @@ class SaveOnBestTrainingRewardCallback(BaseCallback):
                 mean_reward = np.mean(y[-100:])
                 if self.verbose > 0:
                     print(f"Num timesteps: {self.num_timesteps}")
-                    print(
-                        f"Best mean reward: {self.best_mean_reward:.2f} - Last mean reward per episode: {mean_reward:.2f}")
+                    print(f"Best mean reward: {self.best_mean_reward:.2f} - Last mean reward per episode: {mean_reward:.2f}")
 
                 # New best model, you could save the agent here
                 if mean_reward > self.best_mean_reward:
+                    
                     self.best_mean_reward = mean_reward
+
+                    # Added new callback for tracking the model along its training progress
+                    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                    self.model_path = self.log_dir + "model_" + str(timestamp) + "_numTimesteps_"+ str(self.num_timesteps)
+                    print("\n Most recently saved model: ", self.model_path, "\n")
+
+                    self.model.save(path=self.model_path)
+
+
                     # Example for saving best model
                     if self.verbose > 0:
                         print(f"Saving new best model to {self.save_path}")

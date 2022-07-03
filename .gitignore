@@ -1,0 +1,7 @@
+
+*.png
+*.pyc
+cnnTraining/
+supervisedLearning/
+vectTraining/
+archived/

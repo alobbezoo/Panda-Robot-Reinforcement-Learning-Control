@@ -10,19 +10,19 @@ import numpy as np
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/PPO/PPO_PandaPickandPlace2_Vect/"
 # MAXLENGTH_PERCENTAGE = 0.3 #1 #0.28
 
-# INPUTS:
-POLICY = "SAC"
-TRAINING = "Vect"
-PROBLEM = "PandaPickandPlace"
-MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-06-28/SACPickandPlace/callback/"
-MAXLENGTH_PERCENTAGE = 0.3 #1 #0.28
+# # INPUTS:
+# POLICY = "SAC"
+# TRAINING = "Vect"
+# PROBLEM = "PandaPickandPlace"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-01/SACOptunaPandaPickAndPlaceDepthDense-v1/optunaCallbackDir/"
+# MAXLENGTH_PERCENTAGE = 1 #0.28
 
 # #INPUTS:
-# POLICY = "PPO"
+# POLICY = "SAC"
 # TRAINING = "Vect"
-# PROBLEM = "PandaGrasp"
-# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-04-24/PPO_PandaGrasp_Vect/"
-# MAXLENGTH_PERCENTAGE = 1 #0.28
+# PROBLEM = "PandaReach"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Vect/SAC/Sparse/"
+# MAXLENGTH_PERCENTAGE = 0.2 #0.28
 
 # #INPUTS: ONLY PLOTTED FOR FEW STEPS, POOR PERFORMANCE
 # POLICY = "PPO"
@@ -31,12 +31,12 @@ MAXLENGTH_PERCENTAGE = 0.3 #1 #0.28
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-04-22/optimizedCustVect/"
 # MAXLENGTH_PERCENTAGE = 1
 
-# #INPUTS:
-# POLICY = "PPO"
-# TRAINING = "Vect"
-# PROBLEM = "PandaGrasp"
-# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-04-21/PPO_PandaGrasp_Vect/"
-# MAXLENGTH_PERCENTAGE = 0.5
+#INPUTS:
+POLICY = "PPO"
+TRAINING = "CNN"
+PROBLEM = "PandaGrasp"
+MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/CNN/PPO/images/"
+MAXLENGTH_PERCENTAGE = 1
 
 # #INPUTS:
 # POLICY = "SAC"
@@ -63,7 +63,7 @@ MAXLENGTH_PERCENTAGE = 0.3 #1 #0.28
 # PROBLEM = "PandaReach"
 # TRAINING = "Vect"
 # POLICY = "PPO"
-# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Vect/PPO/"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Vect/PPO/Sparse/"
 # MAXLENGTH_PERCENTAGE = 1 #0.25 #0.28
 
 # # INPUTS:
