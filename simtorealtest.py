@@ -27,14 +27,14 @@ from SB3.recordVideo import record_video_single, record_video_multiple
 # from wrappers.pandaPPOTrainedGraspWrapperVect_BW_D_0_Supervised import PandaWrapper
 from wrappers.pandaWrapperVect import PandaWrapperFunction
 
-POLICY = PPO
-# POLICY = SAC
-POLICYNAME = "PPO"
-# POLICYNAME = "SAC"
-PandaWrapper = PandaWrapperFunction(6)
+# POLICY = PPO
+POLICY = SAC
+# POLICYNAME = "PPO"
+POLICYNAME = "SAC"
+PandaWrapper = PandaWrapperFunction(13)
 
-ENVNAME = "PandaReach"
-# ENVNAME = "PandaGrasp"
+# ENVNAME = "PandaReach"
+ENVNAME = "PandaGrasp"
 # ENVNAME = "PandaPickandPlace"
 # ENVNAME = "PPO_Semi_Supervised_PandaGrasp"
 
@@ -46,13 +46,13 @@ TYPE = "Vect"
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-06-27/PPOGrasp/callback/best_model.zip"
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-06-26/SACOptunaPandaPickAndPlaceDepthDense-v1/optimizedCallbackDir/best_model.zip"
 
-MODELPATH = "./trainedModelsPlots/PandaReach/Vect/PPO/Dense/best_model.zip"
+# MODELPATH = "./trainedModelsPlots/PandaGrasp/Vect/PPO/DENSE/best_model.zip"
+MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/Vect/SAC/Dense/best_model.zip"
 
-loaded_model = POLICY.load(MODELPATH)
-loaded_model.device = "cpu"
+loaded_model = POLICY.load(MODELPATH, device='cpu')
 
-ENV_ID = "PandaReachDepthDense-v1" 
-# ENV_ID = "PandaGraspDepthDense-v1" 
+# ENV_ID = "PandaReachDepthDense-v1" 
+ENV_ID = "PandaGraspDepthBlockDense-v1" 
 # ENV_ID = "PandaPickAndPlaceDepthBlockDense-v1" 
 
 RENDER = False
@@ -88,13 +88,26 @@ from helpers.ros_bridge_send import publish_joint
 import time
 env = gym.make(ENV_ID, render=True)
 env = PandaWrapper(env)
+
+obs_target = env.sim.get_base_position("object")
+#[0.02941849 0.07782004 0.02      ]
+
+env.sim.set_base_pose("object", np.array([0.1, 0.4, 0.025]), np.array([0, 0, 0, 1]))
+print("obs_target: ", obs_target)
+
 obs = env.reset()
 publish_joint(env)
-for i in range(20):
-    time.sleep(3)
-    action, _ = loaded_model.predict(obs)
-    obs, _, _, _ = env.step(action)
-    publish_joint(env)
+done = False
+
+while done == False:
+    time.sleep(0.5)
+    action, _ = loaded_model.predict(obs) 
+    print("action is: ", action)
+    action += np.array([0, 0, 0.4, 0])
+    print("action is: ", action)
+    obs, _, done, _ = env.step(action)
+    # print("done is: ", done)
+    # publish_joint(env)
 
 
 # print("starting video recorder: ")
