@@ -13,10 +13,16 @@ from std_msgs.msg import String
 from geometry_msgs.msg import Pose
 import time
 
+def clear(message):
+	global clear
+	clear = True
+	#print("CLEARED!")
+
 rospy.init_node('bridge', anonymous=True)
 joint_pub = rospy.Publisher('/bridge/joint_angles', Float64MultiArray, queue_size=10)
 pose_pub = rospy.Publisher('/bridge/pose', Pose, queue_size=10)
 time.sleep(1) # initial wait to ensure first message received
+rospy.Subscriber("/bridge/joint_angles/success", String, clear)
 
 def talker(kind, message):
 	if kind == "joints":
@@ -27,16 +33,15 @@ def talker(kind, message):
 		rospy.loginfo(message)
 		pose_pub.publish(message)
 
-def listener():
-	rospy.Subscriber("/bridge/joint_angles/success", String, clear)
-	rospy.spin()
-
-def clear():
-	clear = True
+#def listener():
+#	rospy.Subscriber("/bridge/joint_angles/success", String, clear)
 
 def publish_joint(env):
+	global clear
 	clear = False
-	listener()
+	print("HERE")
+#	listener()
+	print("AFTER LISTENER")
 	body_name = env.robot.body_name
 	joint_angles = np.array([env.sim.get_joint_angle(joint=i, body=body_name) for i in range(7)])
 
@@ -46,7 +51,7 @@ def publish_joint(env):
 	message.data = joint_goals
 
 	talker("joints", message)
-	while clear = False:
+	while clear == False:
 		pass
 
 def publish_pose(env):
