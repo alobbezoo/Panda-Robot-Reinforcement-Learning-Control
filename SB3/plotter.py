@@ -44,9 +44,10 @@ def plot_results(log_folder, img_name, img_folder, maxlengthpercentage=1, window
     x, y = ts2xy(load_results(log_folder), 'timesteps')
 
     maxlength = int((np.shape(x)[0])*maxlengthpercentage)
+    print(maxlength)
 
-    x = x[int(0):int(maxlength)]
-    y = y[int(0):int(maxlength)]
+    x = x[int(18000):int(maxlength)]
+    y = y[int(18000):int(maxlength)]
 
     y = moving_average(y, window=window_size)
 

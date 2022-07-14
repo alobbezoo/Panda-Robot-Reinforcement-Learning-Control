@@ -18,7 +18,7 @@ class PandaPickAndPlaceBlockDepth(RobotTaskEnv):
     """
 
     def __init__(self, render: bool = False, reward_type: str = "sparse", control_type: str = "ee") -> None:
-        sim = PyBullet(render=render)
+        sim = PyBullet(render=render, background_color=np.array([255,255,255]))
         robot = Panda(sim=sim, block_gripper=False, base_position=np.array([-0.6, 0.0, 0.0]), control_type=control_type)
         task = PickAndPlace(sim=sim, reward_type=reward_type, get_ee_position=robot.get_ee_position, 
             gripper_width = robot.get_fingers_width, distance_threshold=0.04)

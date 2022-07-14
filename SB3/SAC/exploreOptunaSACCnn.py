@@ -25,6 +25,10 @@ import numpy as np
 from typing import Any, Dict
 import os
 
+
+import torch
+import gc
+
 class OptunaFunc():
     """
     :param env: (gym.Env) Gym environment that will be wrapped
@@ -60,23 +64,28 @@ class OptunaFunc():
 
     def sample_params(self, trial: optuna.Trial) -> Dict[str, Any]:
         """Sampler for hyperparameters."""
+
+        # Clear Memory 
+        gc.collect()
+        torch.cuda.empty_cache()
+
         gamma = trial.suggest_float("gamma", 0.92, 0.9999, log=True)
-        tau = trial.suggest_float("tau", 0.0005, 0.04, log=True)
-        learning_rate = trial.suggest_float("lr", 1e-5, 3e-3, log=True)
-        ent_coef = "auto" # trial.suggest_float("ent_coef", 0.001, 0.3, log=True)
+        tau = trial.suggest_float("tau", 0.005, 0.04, log=True)
+        learning_rate = trial.suggest_float("lr", 1e-9, 1e-5, log=True)
+        ent_coef = "auto" # trial.suggest_float("ent_coef", 0.05, 0.15, log=True)
         
-        batch_size = 2**trial.suggest_int("batch_size_num", 6, 11, log=True)
-        learning_starts = 1000*trial.suggest_int("learning_starts", 1, 10, log=True) 
+        batch_size = 2**trial.suggest_int("batch_size_num", 6, 10, log=True)
+        learning_starts = 5000 #1000*trial.suggest_int("learning_starts", 1, 10, log=True) 
         buffer_size = 50000 #*trial.suggest_int("buffer_size_num", 1, 10, log=True) 
-        train_freq = 50*trial.suggest_int("train_freq", 1, 5, log=True) 
+        train_freq = 100 #50*trial.suggest_int("train_freq", 1, 5, log=True) 
         gradient_steps = train_freq
 
-        action_noise = 0.05*trial.suggest_int("action_noise_int", 1, 3, log=True) - 0.05 #minium is zero noise
+        action_noise = 0.1 #0.05*trial.suggest_int("action_noise_int", 1, 4, log=True) - 0.05 #minium is zero noise
         self.action_noise = action_noise
 
-        net_arch_width_int = trial.suggest_int("net_arch_width_int", 6, 8)
+        net_arch_width_int = 7 #trial.suggest_int("net_arch_width_int", 6, 8)
         net_arch_width = 2 ** net_arch_width_int
-        net_arch_depth = trial.suggest_int("net_arch_depth", 3, 5)
+        net_arch_depth = 4 #trial.suggest_int("net_arch_depth", 3, 5)
         net_arch_array = np.ones(net_arch_depth,dtype=int)
 
         net_arch = (net_arch_array*net_arch_width).tolist()

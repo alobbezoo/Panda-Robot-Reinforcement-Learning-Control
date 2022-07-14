@@ -1,0 +1,734 @@
+Script started on 2022-07-06 16:13:08-04:00 [TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="203" LINES="53"]
+bash: devel/setup.bash: No such file or directory
+bash: /home/hjkwon/catkin_ws/src/moveit/devel/setup.bash: No such file or directory
+]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ conda activate rle[K_env
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ ls
+algorithmTrialCompletionRate.py  [0m[01;34menv[0m              [01;34mhelpers[0m    modelAccuracy.log  README.md         requirements.txt              [01;34mSB3[0m                 [01;34mtrainedModelsPlots[0m
+[01;34marchived[0m                         environment.yml  LICENSE    plotResults.py     recordResults.py  RESNET_LAYER_RENDERING.ipynb  simtorealtest.py    [01;34mvectTraining[0m
+[01;34mcnnTraining[0m                      [01;34mgazeboControl[0m    memory.py  [01;34m__pycache__[0m        register.py       [01;34mSAC[0m                           [01;34msupervisedLearning[0m  [01;34mwrappers[0m
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ python3 algorithmTrialCompletionRate.py ls[Kpython3 algorithmTrialCompletionRate.py 
+pybullet build time: Dec  1 2021 18:34:28
+Traceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/algorithmTrialCompletionRate.py", line 84, in <module>
+    loaded_model = POLICY.load(MODELPATH, device="cpu")
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/base_class.py", line 687, in load
+    data, params, pytorch_variables = load_from_zip_file(
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/save_util.py", line 388, in load_from_zip_file
+    load_path = open_path(load_path, "r", verbose=verbose, suffix="zip")
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/save_util.py", line 232, in open_path_str
+    return open_path(pathlib.Path(path), mode, verbose, suffix)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/save_util.py", line 284, in open_path_pathlib
+    return open_path(path, mode, verbose, suffix)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/functools.py", line 888, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/save_util.py", line 264, in open_path_pathlib
+    raise error
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/save_util.py", line 256, in open_path_pathlib
+    path = path.open("rb")
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/pathlib.py", line 1252, in open
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+(EE) 
+Fatal server error:
+(EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE) 
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/pathlib.py", line 1120, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/PPO/best_model.zip.zip'
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ python3 algorithmTrialCompletionRate.py 
+pybullet build time: Dec  1 2021 18:34:28
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+(EE) 
+Fatal server error:
+(EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE) 
+n_envs =  4
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+Traceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/algorithmTrialCompletionRate.py", line 90, in <module>
+    eval_env = make_panda_env(env_id=ENV_ID, n_envs=GOALNENVS, wrapper=PandaWrapper)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/SB3/vectEnvs.py", line 91, in make_panda_env
+    return make_vec_env(
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/env_util.py", line 105, in make_vec_env
+    return vec_env_cls([make_env(i + start_index) for i in range(n_envs)], **vec_env_kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 25, in __init__
+    self.envs = [fn() for fn in env_fns]
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 25, in <listcomp>
+    self.envs = [fn() for fn in env_fns]
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/env_util.py", line 95, in _init
+    env = wrapper_class(env, **wrapper_kwargs)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/SB3/vectEnvs.py", line 87, in panda_wrapper
+    env = wrapper(env, **wrapper_kwargs)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/wrappers/pandaPPOTrainedGraspWrapperVect_BW_D_0_Supervised.py", line 40, in __init__
+    self.modelSqueeze.load_state_dict(torch.load("/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/pandaGraspTrainingData/trainedModelsSqueezenet_Original/model_20220625_115828_400"))
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/pandaGraspTrainingData/trainedModelsSqueezenet_Original/model_20220625_115828_400'
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ python3 algorithmTrialCompletionRate.py ls[K
+algorithmTrialCompletionRate.py  [0m[01;34menv[0m              [01;34mhelpers[0m    modelAccuracy.log  README.md         requirements.txt              [01;34mSB3[0m                 [01;34mtrainedModelsPlots[0m
+[01;34marchived[0m                         environment.yml  LICENSE    plotResults.py     recordResults.py  RESNET_LAYER_RENDERING.ipynb  simtorealtest.py    [01;34mvectTraining[0m
+[01;34mcnnTraining[0m                      [01;34mgazeboControl[0m    memory.py  [01;34m__pycache__[0m        register.py       [01;34mSAC[0m                           [01;34msupervisedLearning[0m  [01;34mwrappers[0m
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ lspython3 algorithmTrialCompletionRate.py 
+pybullet build time: Dec  1 2021 18:34:28
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+(EE) 
+Fatal server error:
+(EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE) 
+n_envs =  4
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+Traceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/algorithmTrialCompletionRate.py", line 90, in <module>
+    eval_env = make_panda_env(env_id=ENV_ID, n_envs=GOALNENVS, wrapper=PandaWrapper)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/SB3/vectEnvs.py", line 91, in make_panda_env
+    return make_vec_env(
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/env_util.py", line 105, in make_vec_env
+    return vec_env_cls([make_env(i + start_index) for i in range(n_envs)], **vec_env_kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 25, in __init__
+    self.envs = [fn() for fn in env_fns]
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 25, in <listcomp>
+    self.envs = [fn() for fn in env_fns]
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/env_util.py", line 95, in _init
+    env = wrapper_class(env, **wrapper_kwargs)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/SB3/vectEnvs.py", line 87, in panda_wrapper
+    env = wrapper(env, **wrapper_kwargs)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/wrappers/pandaPPOTrainedGraspWrapperVect_BW_D_0_Supervised.py", line 40, in __init__
+    self.modelSqueeze.load_state_dict(torch.load("/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/pandaGraspTrainingData/trainedModelsSqueezenet_Original/model_20220625_115828_400"))
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/pandaGraspTrainingData/trainedModelsSqueezenet_Original/model_20220625_115828_400'
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ python3 algorithmTrialCompletionRate.py [1P[1P[1P[1P[1P[1P[1P[1@v[1@i[1@m
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;53r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[53;1H"algorithmTrialCompletionRate.py" [noeol] 113L, 3211C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[31m"""
+File for testing the pre-trained networks
+"""[m
+
+[34m# CUSTOM IMPORTS: [m
+[35mfrom[m SB3.vectEnvs [35mimport[m make_panda_env
+[35mimport[m register
+
+[35mfrom[m SB3.customCnnShallow_V0 [35mimport[m CustomCNN
+[35mfrom[m stable_baselines3.common.vec_env [35mimport[m DummyVecEnv
+[35mfrom[m stable_baselines3.common.vec_env.vec_frame_stack [35mimport[m VecFrameStack
+
+[35mfrom[m SB3.callbacks [35mimport[m SaveOnBestTrainingRewardCallback
+[35mfrom[m stable_baselines3 [35mimport[m PPO, SAC, TD3
+
+[34m# STANDARD IMPORTS[m
+[35mfrom[m tabnanny [35mimport[m verbose
+[35mfrom[m stable_baselines3.common [35mimport[m results_plotter
+[35mimport[m matplotlib.pyplot [38;5;130mas[m plt
+[35mimport[m torch
+[35mimport[m numpy [38;5;130mas[m np
+[35mimport[m gym
+[35mimport[m os
+
+[35mfrom[m SB3.recordVideo [35mimport[m record_video_single, record_video_multiple
+
+[34m#INPUTS:[m
+[35mfrom[m wrappers.pandaPPOTrainedGraspWrapperVect_BW_D_0_Supervised [35mimport[m PandaWrapper
+[35mfrom[m wrappers.pandaWrapperVect [35mimport[m PandaWrapperFunction
+[35mfrom[m stable_baselines3.common.evaluation [35mimport[m evaluate_policy
+
+[35mfrom[m SB3.vectEnvs [35mimport[m make_panda_env
+[35mimport[m register
+
+[35mimport[m warnings
+[35mfrom[m typing [35mimport[m Any, Callable, Dict, List, Optional, Tuple, Union
+
+[35mimport[m gym
+[35mimport[m numpy [38;5;130mas[m np
+
+[35mfrom[m stable_baselines3.common [35mimport[m base_class
+[35mfrom[m stable_baselines3.common.vec_env [35mimport[m DummyVecEnv, VecEnv, VecMonitor, is_vecenv_wrapped[46;1HPOLICY = PPO
+[34m# POLICY = SAC[m
+POLICYNAME = [31m"PPO"[m
+[34m# POLICYNAME = "SAC"
+
+# ENVNAME = "PandaReach"[m
+ENVNAME = [31m"PandaGrasp"[m[53;186H1,1[11CTop[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[27m[23m[29m[m[H[2J[?25l[1;1H[95m"""
+File for testing the pre-trained networks
+"""[m
+
+[96m# CUSTOM IMPORTS: [m
+[38;5;81mfrom[m SB3.vectEnvs [38;5;81mimport[m make_panda_env
+[38;5;81mimport[m register
+
+[38;5;81mfrom[m SB3.customCnnShallow_V0 [38;5;81mimport[m CustomCNN
+[38;5;81mfrom[m stable_baselines3.common.vec_env [38;5;81mimport[m DummyVecEnv
+[38;5;81mfrom[m stable_baselines3.common.vec_env.vec_frame_stack [38;5;81mimport[m VecFrameStack
+
+[38;5;81mfrom[m SB3.callbacks [38;5;81mimport[m SaveOnBestTrainingRewardCallback
+[38;5;81mfrom[m stable_baselines3 [38;5;81mimport[m PPO, SAC, TD3
+
+[96m# STANDARD IMPORTS[m
+[38;5;81mfrom[m tabnanny [38;5;81mimport[m verbose
+[38;5;81mfrom[m stable_baselines3.common [38;5;81mimport[m results_plotter
+[38;5;81mimport[m matplotlib.pyplot [93mas[m plt
+[38;5;81mimport[m torch
+[38;5;81mimport[m numpy [93mas[m np
+[38;5;81mimport[m gym
+[38;5;81mimport[m os
+
+[38;5;81mfrom[m SB3.recordVideo [38;5;81mimport[m record_video_single, record_video_multiple
+
+[96m#INPUTS:[m
+[38;5;81mfrom[m wrappers.pandaPPOTrainedGraspWrapperVect_BW_D_0_Supervised [38;5;81mimport[m PandaWrapper
+[38;5;81mfrom[m wrappers.pandaWrapperVect [38;5;81mimport[m PandaWrapperFunction
+[38;5;81mfrom[m stable_baselines3.common.evaluation [38;5;81mimport[m evaluate_policy
+
+[38;5;81mfrom[m SB3.vectEnvs [38;5;81mimport[m make_panda_env
+[38;5;81mimport[m register
+
+[38;5;81mimport[m warnings
+[38;5;81mfrom[m typing [38;5;81mimport[m Any, Callable, Dict, List, Optional, Tuple, Union
+
+[38;5;81mimport[m gym
+[38;5;81mimport[m numpy [93mas[m np
+
+[38;5;81mfrom[m stable_baselines3.common [38;5;81mimport[m base_class
+[38;5;81mfrom[m stable_baselines3.common.vec_env [38;5;81mimport[m DummyVecEnv, VecEnv, VecMonitor, is_vecenv_wrapped[46;1HPOLICY = PPO
+[96m# POLICY = SAC[m
+POLICYNAME = [95m"PPO"[m
+[96m# POLICYNAME = "SAC"
+
+# ENVNAME = "PandaReach"[m
+ENVNAME = [95m"PandaGrasp"[m[53;186H1,1[11CTop"algorithmTrialCompletionRate.py" [noeol] 113L, 3211C[1;1H[?25h[?25l[53;176H~@k[1;1H[53;176H   [2;1H[53;186H2[2;1H[?25h[?25l[53;176H~@k[2;1H[53;176H   [3;1H[53;186H3[3;1H[?25h[?25l[53;176H~@k[3;1H[53;176H   [4;1H[53;186H4,0-1[4;1H[?25h[?25l[53;176H~@k[4;1H[53;176H   [5;1H[53;186H5,1  [5;1H[?25h[?25l[53;176H~@k[5;1H[53;176H   [6;1H[53;186H6[6;1H[?25h[?25l[53;176H~@k[6;1H[53;176H   [7;1H[53;186H7[7;1H[?25h[?25l[53;176H~@k[7;1H[53;176H   [8;1H[53;186H8,0-1[8;1H[?25h[?25l[53;176H~@k[8;1H[53;176H   [9;1H[53;186H9,1  [9;1H[?25h[?25l[53;176H~@k[9;1H[53;176H   [10;1H[53;186H10,1[10;1H[?25h[?25l[53;176H~@k[10;1H[53;176H   [11;1H[53;187H1[11;1H[?25h[?25l[53;176H~@k[11;1H[53;176H   [12;1H[53;187H2,0-1[12;1H[?25h[?25l[53;176H~@k[12;1H[53;176H   [13;1H[53;187H3,1  [13;1H[?25h[?25l[53;176H~@k[13;1H[53;176H   [14;1H[53;187H4[14;1H[?25h[?25l[53;176H~@k[14;1H[53;176H   [15;1H[53;187H5,0-1[15;1H[?25h[?25l[53;176H~@k[15;1H[53;176H   [16;1H[53;187H6,1  [16;1H[?25h[?25l[53;176H~@k[16;1H[53;176H   [17;1H[53;187H7[17;1H[?25h[?25l[53;176H~@k[17;1H[53;176H   [18;1H[53;187H8[18;1H[?25h[?25l[53;176H~@k[18;1H[53;176H   [19;1H[53;187H9[19;1H[?25h[?25l[53;176H~@k[19;1H[53;176H   [20;1H[53;186H20[20;1H[?25h[?25l[53;176H~@k[20;1H[53;176H   [21;1H[53;187H1[21;1H[?25h[?25l[53;176H~@k[21;1H[53;176H   [22;1H[53;187H2[22;1H[?25h[?25l[53;176H~@k[22;1H[53;176H   [23;1H[53;187H3[23;1H[?25h[?25l[53;176H~@k[23;1H[53;176H   [24;1H[53;187H4,0-1[24;1H[?25h[?25l[53;176H~@k[24;1H[53;176H   [25;1H[53;187H5,1  [25;1H[?25h[?25l[53;176H~@k[25;1H[53;176H   [26;1H[53;187H6,0-1[26;1H[?25h[?25l[53;176H~@k[26;1H[53;176H   [27;1H[53;187H7,1  [27;1H[?25h[?25l[53;176H~@k[27;1H[53;176H   [28;1H[53;187H8[28;1H[?25h[?25l[53;176H~@k[28;1H[53;176H   [29;1H[53;187H9[29;1H[?25h[?25l[53;176H~@k[29;1H[53;176H   [30;1H[53;186H30[30;1H[?25h[?25l[53;176H~@k[30;1H[53;176H   [31;1H[53;187H1,0-1[31;1H[?25h[?25l[53;176H~@k[31;1H[53;176H   [32;1H[53;187H2,1  [32;1H[?25h[?25l[53;176H~@k[32;1H[53;176H   [33;1H[53;187H3[33;1H[?25h[?25l[53;176H~@k[33;1H[53;176H   [34;1H[53;187H4,0-1[34;1H[?25h[?25l[53;176H~@k[34;1H[53;176H   [35;1H[53;187H5,1  [35;1H[?25h[?25l[53;176H~@k[35;1H[53;176H   [36;1H[53;187H6[36;1H[?25h[?25l[53;176H~@k[36;1H[53;176H   [37;1H[53;187H7,0-1[37;1H[?25h[?25l[53;176H~@k[37;1H[53;176H   [38;1H[53;187H8,1  [38;1H[?25h[?25l[53;176H~@k[38;1H[53;176H   [39;1H[53;187H9[39;1H[?25h[?25l[53;176H~@k[39;1H[53;176H   [40;1H[53;186H40,0-1[40;1H[?25h[?25l[53;176H~@k[40;1H[53;176H   [41;1H[53;187H1,1  [41;1H[?25h[?25l[53;176H~@k[41;1H[53;176H   [42;1H[53;187H2[42;1H[?25h[?25l[53;176H~@k[42;1H[53;176H   [43;1H[53;187H3,0-1[43;1H[?25h[?25l[53;176H~@k[43;1H[53;176H   [44;1H[53;187H4[44;1H[?25h[?25l[53;176H~@k[44;1H[53;176H   [45;1H[53;187H5[45;1H[?25h[?25l[53;176H~@k[45;1H[53;176H   [46;1H[53;187H6,1  [46;1H[?25h[?25l[53;176H~@k[46;1H[53;176H   [47;1H[53;187H7[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# ENVNAME = "PandaPickandPlace"[m[53;1H[K[53;186H48,1[11C1%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# ENVNAME = "PPO_Semi_Supervised_PandaGrasp"[m[53;186H[K[53;186H49,1[11C3%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H50,0-1[9C4%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# TYPE = "CNN"[m[53;186H[K[53;186H51,1[11C6%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HTYPE = [95m"Vect"[m[53;186H[K[53;186H52,1[11C8%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H53,1[11C9%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# # VECT[m[53;186H[K[53;186H54,1[10C11%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H55,0-1[8C13%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# # Grasp:[m[53;186H[K[53;186H56,1[10C14%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HMODELPATH = [95m"/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/Vect/PPO/Dense/best_model.zip"[m[53;186H[K[53;186H57,1[10C16%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/Vect/SAC/Dense/best_model.zip"[m[53;186H[K[53;186H58,0-1[8C18%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H59,1[10C19%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# # Pick and Place[m[53;186H[K[53;186H60,0-1[8C21%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/SAC/best_model.zip"[m[53;186H[K[53;186H61,1[10C22%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/PPO/best_model.zip"[m[53;186H[K[53;186H62,1[10C24%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H63,1[10C26%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H64,0-1[8C27%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H65,1[10C29%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Hloaded_model = POLICY.load(MODELPATH, device=[95m"cpu"[m)[53;186H[K[53;186H66,1[10C31%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HMODEL = loaded_model.policy[53;186H[K[53;186H67,1[10C32%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H68,0-1[8C34%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# ENV_ID = "PandaReachDepthDense-v1" [m[53;186H[K[53;186H69,0-1[8C36%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# ENV_ID = "PandaGraspDepthDense-v1" [m[53;186H[K[53;186H70,0-1[8C37%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# ENV_ID = "PandaPickAndPlaceDepthBlockDense-v1" [m[53;186H[K[53;186H71,1[10C39%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H72,1[10C40%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# ENV_ID = "PandaPickAndPlaceDepthDense-v1" [m[53;186H[K[53;186H73,0-1[8C42%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H74,1[10C44%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HENV_ID = [95m"PandaGraspDepthDense-v1"[m[53;186H[K[53;186H75,1[10C45%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H76,1[10C47%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HRENDER = [1m[96mFalse[m[53;186H[K[53;186H77,0-1[8C49%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HNEPISODES = [95m10[m[53;186H[K[53;186H78,1[10C50%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HGOALNENVS = [95m5[m[53;186H[K[53;186H79,0-1[8C52%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H80,1[10C54%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H81,0-1[8C55%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Hn_envs = loaded_model.n_envs[53;186H[K[53;186H82,1[10C57%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[1m[96mprint[m([95m"n_envs = "[m, n_envs)[53;186H[K[53;186H83,1[10C59%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H84,1[10C60%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Heval_env = make_panda_env(env_id=ENV_ID, n_envs=GOALNENVS, wrapper=PandaWrapper)[53;186H[K[53;186H85,0-1[8C62%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Heval_env = VecFrameStack(eval_env, n_stack=GOALNENVS)[53;186H[K[53;186H86,0-1[8C63%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H87,1[10C65%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# print("eval_env.observation_space", eval_env.observation_space)[m[53;186H[K[53;186H88,1[10C67%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[1m[96mprint[m([95m"n_envs = "[m, eval_env.num_envs)[53;186H[K[53;186H89,0-1[8C68%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H90,1[10C70%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H91,1[10C72%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Hepisode_rewards, episode_lengths = evaluate_policy(env=eval_env, model=MODEL, n_eval_episodes=NEPISODES, [38;5;224m\[m[53;186H[K[53;186H92,0-1[8C73%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;5Hreturn_episode_rewards=[1m[96mTrue[m, deterministic=[1m[96mFalse[m)[53;186H[K[53;186H93,1[10C75%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H94,1[10C77%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Hyescount = [95m0[m[53;186H[K[53;186H95,0-1[8C78%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1Hcounter = [95m0[m[53;186H[K[53;186H96,0-1[8C80%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H97,1[10C81%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[93mfor[m i [93min[m episode_lengths:[53;186H[K[53;186H98,1[10C83%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;5H[93mif[m i < [95m50[m:[53;186H[K[53;186H99,0-1[8C85%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;9Hyescount += [95m1[m[53;186H[K[53;186H100,1[9C86%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;5Hcounter+=[95m1[m[53;186H[K[53;186H101,1[9C88%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H102,0-1[7C90%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1HmodelCompletionRate = (yescount)/(NEPISODES)[53;186H[K[53;186H103,1[9C91%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[53;186H[K[53;186H104,1[9C93%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[1m[96mprint[m([95m"[m[38;5;224m\n[m[95mRewards for "[m,ENVNAME, TYPE, POLICYNAME, [95m"are:"[m)[53;186H[K[53;186H105,1[9C95%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[96m# print("Episode rewards are: ", episode_rewards)[m[53;186H[K[53;186H106,1[9C96%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[1m[96mprint[m([95m"Episode lengths are: "[m, episode_lengths)[53;186H[K[53;186H107,1[9C98%[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [47;1H[1;52r[52;1H
+[1;53r[52;1H[1m[96mprint[m([95m"Episode modelCompletionRate are: "[m, modelCompletionRate, [95m"[m[38;5;224m\n[m[95m"[m)[53;186H[K[53;186H108,1[9CBot[47;1H[?25h[?25l[53;176H~@k[47;1H[53;176H   [48;1H[53;188H9,0-1[48;1H[?25h[?25l[53;176H~@k[48;1H[53;176H   [49;1H[53;187H10,1  [49;1H[?25h[?25l[53;176H~@k[49;1H[53;176H   [50;1H[53;188H1[50;1H[?25h[?25l[53;176H~@k[50;1H[53;176H   [51;1H[53;188H2[51;1H[?25h[?25l[53;176H~@k[51;1H[53;176H   [52;1H[53;188H3[52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H~@k[52;1H[53;176H   [52;1H[?25h[?25l[53;176H^[[52;1H[53;176H  [52;1H[53;176H^[[52;1H[53;176H  [52;1H[?25h[?25l[53;176H:[52;1H[53;176H[K[53;1H:[?2004h[?25hx[?25l[?2004l[23;2t[23;1t[53;1H[K[53;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir=/home/hjkwon/Document[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/SummaryWriter_20220706_131653
+[0m[38;5;8m[[0m2022-07-07T13:16:07Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+[0m[38;5;8m[[0m2022-07-07T13:16:12Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir=/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/SummaryWriter_20220706_131653rSummaryWriter_20220706_131653uSummaryWriter_20220706_131653nSummaryWriter_20220706_131653sSummaryWriter_20220706_131653/SummaryWriter_20220706_131653
+[0m[38;5;8m[[0m2022-07-07T13:16:56Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+[0m[38;5;8m[[0m2022-07-07T13:17:01Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:17:06Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:17:11Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir=/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet1/runs/SummaryWriter_20220706_131653[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653
+[0m[38;5;8m[[0m2022-07-07T13:17:57Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+[0m[38;5;8m[[0m2022-07-07T13:18:02Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:18:07Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:18:12Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:18:17Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:18:22Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:18:27Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653: No such file or directory (os error 2)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir=/h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K0/runs/SummaryWriter_20220706_092716
+[0m[38;5;8m[[0m2022-07-07T13:18:43Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_092716: No such file or directory (os error 2)
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+[0m[38;5;8m[[0m2022-07-07T13:18:48Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_092716: No such file or directory (os error 2)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir logs/fit[K[K[K[K[K[K[K[K/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/graspCylinderTrainingData_120X120_10000/trainedModelsSqueezeNet/runs/SummaryWriter_20220629_172438
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/graspCylinderTrainingData_120X120_10000/trainedModelsSqueezeNet/runs/SummaryWriter_20220629_172438[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+[0m[38;5;8m[[0m2022-07-07T13:22:09Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554: No such file or directory (os error 2)
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+[0m[38;5;8m[[0m2022-07-07T13:22:14Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554: No such file or directory (os error 2)
+[0m[38;5;8m[[0m2022-07-07T13:22:19Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554: No such file or directory (os error 2)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554[K[K[K
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+[0m[38;5;8m[[0m2022-07-07T13:22:59Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231: No such file or directory (os error 2)
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Come/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/graspCylinderTra[10PiningData_120X120_10000/trainedModelsSqueezeNet/runs/SummaryWriter_20220629_172438[A(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554[K554
+[0m[38;5;8m[[0m2022-07-07T13:23:31Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554: No such file or directory (os error 2)
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+[0m[38;5;8m[[0m2022-07-07T13:23:36Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554: No such file or directory (os error 2)
+^[[0m[38;5;8m[[0m2022-07-07T13:23:41Z [0m[1m[31mERROR[0m rustboard_core::disk_logdir[0m[38;5;8m][0m While walking log directory: IO error for operation on /h/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554: No such file or directory (os error 2)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --d[Klogdir /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_100x100_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_134902
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_120x120_10000/trainedModelsSqueezeNet10000_2/runs/SummaryWriter_20220706_165606
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_90x90_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_231554
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensoro[Kboard --logdir /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_131653
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard 0[K--logdir
+^CTraceback (most recent call last):
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/compat/__init__.py", line 42, in tf
+    from tensorboard.compat import notf  # noqa: F401
+ImportError: cannot import name 'notf' from 'tensorboard.compat' (/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/compat/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hjkwon/anaconda3/envs/rl_env/bin/tensorboard", line 10, in <module>
+    sys.exit(run_main())
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/main.py", line 39, in run_main
+    main_lib.global_init()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/main_lib.py", line 40, in global_init
+    if getattr(tf, "__version__", "stub") == "stub":
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/lazy.py", line 65, in __getattr__
+    return getattr(load_once(self), attr_name)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/lazy.py", line 97, in wrapper
+    cache[arg] = f(arg)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/lazy.py", line 50, in load_once
+    module = load_fn()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorboard/compat/__init__.py", line 45, in tf
+    import tensorflow
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/__init__.py", line 55, in <module>
+    from ._api.v2 import compat
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/__init__.py", line 39, in <module>
+    from . import v1
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/v1/__init__.py", line 34, in <module>
+    from . import compat
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/v1/compat/__init__.py", line 40, in <module>
+    from . import v2
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/v1/compat/v2/__init__.py", line 32, in <module>
+    from tensorflow._api.v2.compat.v2 import __internal__
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/v2/__init__.py", line 37, in <module>
+    from . import compat
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/v2/compat/__init__.py", line 40, in <module>
+    from . import v2
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/_api/v2/compat/v2/compat/v2/__init__.py", line 349, in <module>
+    from tensorflow.python.keras.api._v2 import keras
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/python/keras/api/_v2/__init__.py", line 10, in <module>
+    from . import keras
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/python/keras/api/_v2/keras/__init__.py", line 15, in <module>
+    from . import applications
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/tensorflow/python/keras/api/_v2/keras/applications/__init__.py", line 17, in <module>
+    from . import mobilenet_v3
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap>", line 231, in _verbose_message
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ tensorboard --logdir /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_80x80_10000/trainedModelsSqueezeNet10000/runs/SummaryWriter_20220706_092716
+
+NOTE: Using experimental fast data loading logic. To disable, pass
+    "--load_fast=false" and report issues on GitHub. More details:
+    https://github.com/tensorflow/tensorboard/issues/4784
+
+Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+TensorBoard 2.8.0 at http://localhost:6006/ (Press CTRL+C to quit)
+^C(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ ls
+algorithmTrialCompletionRate.py  [0m[01;34menv[0m              [01;34mhelpers[0m    modelAccuracy.log  README.md         requirements.txt              [01;34mSB3[0m                 [01;34mtrainedModelsPlots[0m
+[01;34marchived[0m                         environment.yml  LICENSE    plotResults.py     recordResults.py  RESNET_LAYER_RENDERING.ipynb  simtorealtest.py    [01;34mvectTraining[0m
+[01;34mcnnTraining[0m                      [01;34mgazeboControl[0m    memory.py  [01;34m__pycache__[0m        register.py       [01;34mSAC[0m                           [01;34msupervisedLearning[0m  [01;34mwrappers[0m
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ cd supervisedLearning/
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ ls
+[0m[01;34marchieved[0m                              mainPPOVect.py               pandaWrapperVect_BW_D_0_Supervised_100.py     [01;34mPandPCylinderTrainingDataWalls_90x90_10000[0m  reachImageRenderSupervisedLearning.py
+[01;34mgraspCylinderTrainingData[0m              mainRenderTest.py            pandaWrapperVect_BW_D_0_Supervised_120.py     pandPImageRenderSupervisedLearning.py       [01;34mSAMPLETrainingData[0m
+graspImageRenderSupervisedLearning.py  networkPretrain.py           pandaWrapperVect_BW_D_0_Supervised_80.py      pandPTrainingComparison.log                 testPretrainedCNN.py
+[01;34mgraspTrainingData[0m                      numberTrainableNodes.py      pandaWrapperVect_BW_D_0_Supervised_90.py      pickAndPlaceSelectAction.py
+loadData.py                            optimizePretrained_V01.py    [01;34mPandPCylinderTrainingDataWalls_100x100_10000[0m  plotterSupervised.py
+loadPretrainedCNN.py                   optunaCustPretrained_V01.py  [01;34mPandPCylinderTrainingDataWalls_120x120_10000[0m  [01;34m__pycache__[0m
+mainOptPretrained_V01.py               pandaWrapperVect_BW_D_0.py   [01;34mPandPCylinderTrainingDataWalls_80x80_10000[0m    [01;34mreachCylinderTrainingData[0m
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+^[[A
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised.py", line 55, in <module>
+    plt.show()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised.py", line 55, in <module>
+    plt.show()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised.py", line 55, in <module>
+    frame1 = frame1.rename(columns={0:'DenseNet80', 1:'DenseNet90', 2:'DenseNet100', 3:'DenseNet120'})
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+frame1:              0         1         2         3
+0    0.005915  0.005395  0.005851  0.004399
+1    0.005356  0.004972  0.005030  0.004118
+2    0.005146  0.003000  0.004659  0.002799
+3    0.003330  0.002836  0.002828  0.002183
+4    0.003167  0.002372  0.002716  0.002044
+..        ...       ...       ...       ...
+995  0.000166       NaN  0.000151       NaN
+996  0.000161       NaN  0.000150       NaN
+997  0.000168       NaN  0.000150       NaN
+998  0.000166       NaN  0.000151       NaN
+999  0.000165       NaN  0.000149       NaN
+
+[1000 rows x 4 columns]
+frame2:          0     1     2     3
+0       1   4.0     1   4.0
+1       4   5.0     4   5.0
+2       5  11.0     5  11.0
+3      11  15.0    11  15.0
+4      12  16.0    12  16.0
+..    ...   ...   ...   ...
+995  1992   NaN  1992   NaN
+996  1993   NaN  1993   NaN
+997  1994   NaN  1994   NaN
+998  1996   NaN  1996   NaN
+999  2000   NaN  2000   NaN
+
+[1000 rows x 4 columns]
+^[[A^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised.py", line 61, in <module>
+    # FOLDER = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/PandPCylinderTrainingDataWalls_120x120_10000/"
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py 
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised.py", line 56, in <module>
+    plt.show()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised.py [1P[1P[1P [C c [1P C omparisonOfImageSizes.png [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [1P [K2 .py 
+Traceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised2.py", line 25, in <module>
+    frame1 = pd.concat(li, axis=1, ignore_index=True)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/pandas/core/reshape/concat.py", line 346, in concat
+    op = _Concatenator(
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/pandas/core/reshape/concat.py", line 403, in __init__
+    raise ValueError("No objects to concatenate")
+ValueError: No objects to concatenate
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised2.py 
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised2.py 
+^[[A
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised2.py", line 39, in <module>
+    plt.show()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised2.py 
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised2.py 
+^[[A
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised2.py", line 35, in <module>
+    ax.legend()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 plotterSupervised2.py 
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning/plotterSupervised2.py", line 36, in <module>
+    plt.show()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/pyplot.py", line 368, in show
+    return _backend_mod.show(*args, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 3544, in show
+    cls.mainloop()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/backend_qt.py", line 1023, in mainloop
+    qt_compat._exec(qApp)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/matplotlib/backends/qt_compat.py", line 262, in _maybe_allow_interrupt
+    old_sigint_handler(*handler_args)
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ ls
+[0m[01;34marchieved[0m                              mainOptPretrained_V01.py     pandaWrapperVect_BW_D_0.py                 [01;34mPandPCylinderTrainingDataWalls_100x100_10000[0m  plotterSupervised2.py
+[01;35mComparisonOfImageSizes.png[0m             mainPPOVect.py               pandaWrapperVect_BW_D_0_Supervised_100.py  [01;34mPandPCylinderTrainingDataWalls_120x120_10000[0m  plotterSupervised.py
+[01;34mgraspCylinderTrainingData[0m              mainRenderTest.py            pandaWrapperVect_BW_D_0_Supervised_120.py  [01;34mPandPCylinderTrainingDataWalls_80x80_10000[0m    [01;34m__pycache__[0m
+graspImageRenderSupervisedLearning.py  networkPretrain.py           pandaWrapperVect_BW_D_0_Supervised_60..py  [01;34mPandPCylinderTrainingDataWalls_90x90_10000[0m    [01;34mreachCylinderTrainingData[0m
+[01;34mgraspTrainingData[0m                      numberTrainableNodes.py      pandaWrapperVect_BW_D_0_Supervised_70.py   pandPImageRenderSupervisedLearning.py         reachImageRenderSupervisedLearning.py
+loadData.py                            optimizePretrained_V01.py    pandaWrapperVect_BW_D_0_Supervised_80.py   pandPTrainingComparison.log                   [01;34mSAMPLETrainingData[0m
+loadPretrainedCNN.py                   optunaCustPretrained_V01.py  pandaWrapperVect_BW_D_0_Supervised_90.py   pickAndPlaceSelectAction.py                   testPretrainedCNN.py
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/supervisedLearning[00m$ python3 [K[K[K[K[K[K[K[Kls
+[0m[01;34marchieved[0m                              mainRenderTest.py                          pandaWrapperVect_BW_D_0_Supervised_70.py      pandPTrainingComparison.log
+[01;35mComparisonOfImageSizes.png[0m             networkPretrain.py                         pandaWrapperVect_BW_D_0_Supervised_80.py      pickAndPlaceSelectAction.py
+[01;34mgraspCylinderTrainingData[0m              numberTrainableNodes.py                    pandaWrapperVect_BW_D_0_Supervised_90.py      plotterSupervised2.py
+graspImageRenderSupervi

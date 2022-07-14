@@ -14,7 +14,7 @@ import numpy as np
 # POLICY = "SAC"
 # TRAINING = "Vect"
 # PROBLEM = "PandaPickandPlace"
-# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-07-01/SACOptunaPandaPickAndPlaceDepthDense-v1/optunaCallbackDir/"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/SAC/"
 # MAXLENGTH_PERCENTAGE = 1 #0.28
 
 # #INPUTS:
@@ -31,12 +31,12 @@ import numpy as np
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/vectTraining/2022-04-22/optimizedCustVect/"
 # MAXLENGTH_PERCENTAGE = 1
 
-#INPUTS:
-POLICY = "PPO"
-TRAINING = "CNN"
-PROBLEM = "PandaGrasp"
-MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/CNN/PPO/images/"
-MAXLENGTH_PERCENTAGE = 1
+# #INPUTS:
+# POLICY = "PPO"
+# TRAINING = "CNN"
+# PROBLEM = "PandaGrasp"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/CNN/PPO/images/"
+# MAXLENGTH_PERCENTAGE = 1
 
 # #INPUTS:
 # POLICY = "SAC"
@@ -45,12 +45,16 @@ MAXLENGTH_PERCENTAGE = 1
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/cnnTraining/2022-06-02/SAC/optimizedCallbackDir/"
 # MAXLENGTH_PERCENTAGE = 1 #0.5 #0.28
 
-# #INPUTS:
-# POLICY = "SAC"
-# TRAINING = "CNN"
-# PROBLEM = "PandaGrasp"
-# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/cnnTraining/2022-06-16/SAC/optimizedCallbackDir/"
-# MAXLENGTH_PERCENTAGE = 0.8 #0.5 #0.28
+#INPUTS:
+POLICY = "SAC"
+TRAINING = "CNN"
+PROBLEM = "PandaReach"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/cnnTraining/2022-07-13/SACCNNReach/callback/"
+MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Cnn/SAC"
+MAXLENGTH_PERCENTAGE = 1 #0.5 #0.28
+
+# evaluations = np.load('/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/cnnTraining/2022-07-13/SACCNNReach/callback/results.npy')
+# print("evaluations are: ", evaluations)
 
 # #INPUTS:
 # PROBLEM = "PandaReach"
@@ -81,10 +85,10 @@ MAXLENGTH_PERCENTAGE = 1
 # MAXLENGTH_PERCENTAGE = 1 #0.5 #0.28
 
 def plotTitle(window = 1, policy=POLICY, training=TRAINING, problem=PROBLEM): 
-    return str(policy + " " + training + problem + " " + "Tuned Training Curve 2 Window=" + str(window))
+    return str(policy + " " + training + problem + " " + "Tuned Training Curve 3 Window=" + str(window))
 
 def saveTitle(window = 1, policy=POLICY, training=TRAINING, problem=PROBLEM): 
-    return str(policy + "_" + training + problem + "_" + "Tuned_Training_Curve2_Window_" + str(window))
+    return str(policy + "_" + training + problem + "_" + "Tuned_Training_Curve3_Window_" + str(window))
 
 # SET DIRECTORIES: 
 import os

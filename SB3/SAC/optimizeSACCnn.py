@@ -79,7 +79,7 @@ class TrainOpt():
             "features_extractor_kwargs":dict(features_dim=128),
             }
 
-        self.n_envs = 5 #self.trial.params['n_envs']
+        self.n_envs = 4 #self.trial.params['n_envs']
         self.action_noise = self.trial.user_attrs['action_noise']
 
         kwargs = {

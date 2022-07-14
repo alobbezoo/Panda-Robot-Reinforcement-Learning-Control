@@ -60,7 +60,7 @@ class PickAndPlace(Task):
             mass=500.0,
             # ghost=True,
             position=np.array([0.05, 0.1, self.target_size / 2]),
-            rgba_color=np.array([0.1, 0.9, 0.1, 0.3]),
+            rgba_color=np.array([0.1, 0.9, 0.1, 1.0]),
             lateral_friction = 1, # None,
             spinning_friction = 1, 
         )
@@ -98,7 +98,7 @@ class PickAndPlace(Task):
 
     def _sample_object(self) -> np.ndarray:
         """Randomize start position of object."""
-        object_position = np.array([-0.20, -0.20, self.object_size / 2])
+        object_position = np.array([-0.10, -0.10, self.object_size / 2])
         noise = self.np_random.uniform(self.obj_range_low, self.obj_range_high)
         object_position += noise
         return object_position

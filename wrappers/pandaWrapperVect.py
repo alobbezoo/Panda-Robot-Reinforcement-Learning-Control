@@ -24,6 +24,7 @@ def PandaWrapperFunction(shape):
       # Call the parent constructor, so we can access self.env later
       super(PandaWrapper, self).__init__(env)
       self.observation_space = spaces.Box(low=-1, high=1, shape=(shape,), dtype=np.float32)
+      self.done = False
 
     def image_process(self, img, depth):
       depth_2 = np.expand_dims(depth, axis=2)
@@ -74,10 +75,13 @@ def PandaWrapperFunction(shape):
       :return: (np.ndarray, float, bool, dict) observation, reward, is the episode over?, additional informations
       """
 
+      if self.done == True:
+        self.reset()
+
       # # modify for Panda specific state vector
-      obs_dict, reward, done, info = self.env.step(action)
+      obs_dict, reward, self.done, info = self.env.step(action)
       obs = obs_dict["observation"]
 
-      return obs, reward, done, info
+      return obs, reward, self.done, info
 
   return PandaWrapper

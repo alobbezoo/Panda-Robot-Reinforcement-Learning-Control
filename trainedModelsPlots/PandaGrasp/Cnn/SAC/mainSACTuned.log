@@ -1,0 +1,986 @@
+Script started on 2022-06-17 15:24:34-04:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="203" LINES="53"]
+bash: devel/setup.bash: No such file or directory
+bash: /home/hjkwon/catkin_ws/src/moveit/devel/setup.bash: No such file or directory
+bash: /home/hjkwon/catkin_ws/devel/setup.bash: No such file or directory
+]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ conda activate rl_)e[K[Kenv
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ ls
+[0m[01;34m2022-06-16[0m  [01;34menv[0m              [01;34mgazeboControl[0m  mainPPOCnnTuner.py  mainSACCnnTuner.log  mainSAC.py        mainTD3CnnTuner.py  mainTD3Tuned.log  PPO-GazeboControl.py  [01;34m__pycache__[0m  register.py       [01;34mSB3[0m
+[01;34m2022-06-17[0m  environment.yml  LICENSE        mainPPO.py          mainSACCnnTuner.py   mainSACTuned.log  mainTD3.py          modelLoader.py    [01;34mpretrainedModels[0m      README.md    requirements.txt  [01;34mwrappers[0m
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ pyton[K[K[K[Kt[Kython3 mainSAC.py [K
+pybullet build time: Dec  1 2021 18:34:28
+
+kwargs:  {'policy': 'CnnPolicy', 'device': 'cpu', 'verbose': 2, 'gamma': 0.98, 'tau': 0.03878172554384911, 'learning_rate': 0.00015246688485137742, 'batch_size': 512, 'train_freq': 100, 'gradient_steps': 100, 'learning_starts': 1000, 'use_sde': 'True', 'use_sde_at_warmup': 'True', 'policy_kwargs': {'net_arch': [256, 256, 256], 'features_extractor_class': <class 'SB3.customCnnShallow_V0.CustomCNN'>, 'features_extractor_kwargs': {'features_dim': 128}}}
+n_envs:  4
+action_noise:  0.1 
+
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+Using cpu device
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/buffers.py:220: UserWarning: This system does not have apparently enough memory to store the complete replay buffer 160.02GB > 117.75GB
+  warnings.warn(
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+^CTraceback (most recent call last):
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/mainSAC.py", line 119, in <module>
+    model.learn(total_timesteps=int(OPTIMIZED_N_TIMESTEPS), callback=callback, log_interval=EVAL_FREQ)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/sac/sac.py", line 292, in learn
+    return super(SAC, self).learn(
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 354, in learn
+    rollout = self.collect_rollouts(
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 588, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(actions)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/base_vec_env.py", line 162, in step
+    return self.step_wait()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/vec_frame_stack.py", line 48, in step_wait
+    observations, rewards, dones, infos = self.venv.step_wait()
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 43, in step_wait
+    obs, self.buf_rews[env_idx], self.buf_dones[env_idx], self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/wrappers/pandaWrapperBW_D.py", line 68, in step
+    img, depth = self.env.render(mode = 'rgb_array', width = 100, height= 100, distance = 1, 
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/gym/core.py", line 254, in render
+    return self.env.render(mode, **kwargs)
+  File "/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/gym/core.py", line 254, in render
+    return self.env.render(mode, **kwargs)
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/robottaskenv.py", line 104, in render
+    return self.sim.render(
+  File "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py", line 112, in render
+    (_, _, px, depth, _) = self.physics_client.getCameraImage(
+KeyboardInterrupt
+
+(rl_env) ]0;hjkwon@HJK-AI-Robotics: ~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[01;32mhjkwon@HJK-AI-Robotics[00m:[01;34m~/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor[00m$ python3 mainSAC.py
+pybullet build time: Dec  1 2021 18:34:28
+
+kwargs:  {'policy': 'CnnPolicy', 'device': 'cpu', 'verbose': 2, 'gamma': 0.98, 'tau': 0.03878172554384911, 'learning_rate': 0.00015246688485137742, 'batch_size': 512, 'train_freq': 100, 'gradient_steps': 100, 'learning_starts': 1000, 'buffer_size': 50000, 'use_sde': 'True', 'use_sde_at_warmup': 'True', 'policy_kwargs': {'net_arch': [256, 256, 256], 'features_extractor_class': <class 'SB3.customCnnShallow_V0.CustomCNN'>, 'features_extractor_kwargs': {'features_dim': 128}}}
+n_envs:  4
+action_noise:  0.1 
+
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+argv[0]=--background_color_red=0.8745098039215686
+argv[1]=
+argv[2]=
+argv[3]=
+argv[4]=
+argv[5]=
+argv[6]=
+argv[7]=
+argv[8]=
+argv[9]=
+argv[10]=
+argv[11]=
+argv[12]=
+argv[13]=
+argv[14]=
+argv[15]=
+argv[16]=
+argv[17]=
+argv[18]=
+argv[19]=
+argv[20]=
+argv[21]=--background_color_green=0.21176470588235294
+argv[22]=
+argv[23]=
+argv[24]=
+argv[25]=
+argv[26]=
+argv[27]=
+argv[28]=
+argv[29]=
+argv[30]=
+argv[31]=
+argv[32]=
+argv[33]=
+argv[34]=
+argv[35]=
+argv[36]=
+argv[37]=
+argv[38]=
+argv[39]=
+argv[40]=
+argv[41]=
+argv[42]=--background_color_blue=0.17647058823529413
+Using cpu device
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 4000
+Best mean reward: -inf - Last mean reward per episode: -23.98
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 8000
+Best mean reward: -23.98 - Last mean reward per episode: -27.64
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 12000
+Best mean reward: -23.98 - Last mean reward per episode: -27.47
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 16000
+Best mean reward: -23.98 - Last mean reward per episode: -28.96
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 20000
+Best mean reward: -23.98 - Last mean reward per episode: -25.80
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 24000
+Best mean reward: -23.98 - Last mean reward per episode: -22.52
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 28000
+Best mean reward: -22.52 - Last mean reward per episode: -23.65
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 32000
+Best mean reward: -22.52 - Last mean reward per episode: -23.29
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 36000
+Best mean reward: -22.52 - Last mean reward per episode: -25.08
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 40000
+Best mean reward: -22.52 - Last mean reward per episode: -23.37
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 44000
+Best mean reward: -22.52 - Last mean reward per episode: -22.93
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 48000
+Best mean reward: -22.52 - Last mean reward per episode: -24.56
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 48.7     |
+|    ep_rew_mean     | -24.8    |
+|    success_rate    | 0.03     |
+| time/              |          |
+|    episodes        | 1000     |
+|    fps             | 1        |
+|    time_elapsed    | 26193    |
+|    total_timesteps | 49528    |
+| train/             |          |
+|    actor_loss      | -0.356   |
+|    critic_loss     | 0.0249   |
+|    ent_coef        | 0.16     |
+|    ent_coef_loss   | -12      |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 12100    |
+|    std             | 0.05     |
+---------------------------------
+Num timesteps: 52000
+Best mean reward: -22.52 - Last mean reward per episode: -27.04
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 56000
+Best mean reward: -22.52 - Last mean reward per episode: -23.11
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 60000
+Best mean reward: -22.52 - Last mean reward per episode: -23.51
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 64000
+Best mean reward: -22.52 - Last mean reward per episode: -23.40
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 68000
+Best mean reward: -22.52 - Last mean reward per episode: -21.48
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 72000
+Best mean reward: -21.48 - Last mean reward per episode: -20.68
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 76000
+Best mean reward: -20.68 - Last mean reward per episode: -19.25
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 80000
+Best mean reward: -19.25 - Last mean reward per episode: -18.90
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 84000
+Best mean reward: -18.90 - Last mean reward per episode: -19.69
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 88000
+Best mean reward: -18.90 - Last mean reward per episode: -20.71
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 92000
+Best mean reward: -18.90 - Last mean reward per episode: -18.65
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 96000
+Best mean reward: -18.65 - Last mean reward per episode: -17.31
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 48.6     |
+|    ep_rew_mean     | -16.1    |
+|    success_rate    | 0.03     |
+| time/              |          |
+|    episodes        | 2000     |
+|    fps             | 1        |
+|    time_elapsed    | 53095    |
+|    total_timesteps | 98956    |
+| train/             |          |
+|    actor_loss      | 0.978    |
+|    critic_loss     | 0.0108   |
+|    ent_coef        | 0.0246   |
+|    ent_coef_loss   | -22.1    |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 24500    |
+|    std             | 0.0501   |
+---------------------------------
+Num timesteps: 100000
+Best mean reward: -17.31 - Last mean reward per episode: -15.06
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 104000
+Best mean reward: -15.06 - Last mean reward per episode: -15.75
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 108000
+Best mean reward: -15.06 - Last mean reward per episode: -17.28
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 112000
+Best mean reward: -15.06 - Last mean reward per episode: -14.73
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 116000
+Best mean reward: -14.73 - Last mean reward per episode: -12.43
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 120000
+Best mean reward: -12.43 - Last mean reward per episode: -12.87
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 124000
+Best mean reward: -12.43 - Last mean reward per episode: -12.28
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 128000
+Best mean reward: -12.28 - Last mean reward per episode: -13.28
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 132000
+Best mean reward: -12.28 - Last mean reward per episode: -10.01
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 136000
+Best mean reward: -10.01 - Last mean reward per episode: -9.06
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 140000
+Best mean reward: -9.06 - Last mean reward per episode: -10.31
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 144000
+Best mean reward: -9.06 - Last mean reward per episode: -9.79
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 45.8     |
+|    ep_rew_mean     | -9.38    |
+|    success_rate    | 0.1      |
+| time/              |          |
+|    episodes        | 3000     |
+|    fps             | 1        |
+|    time_elapsed    | 79275    |
+|    total_timesteps | 146680   |
+| train/             |          |
+|    actor_loss      | 2.04     |
+|    critic_loss     | 0.0176   |
+|    ent_coef        | 0.0044   |
+|    ent_coef_loss   | -18.4    |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 36400    |
+|    std             | 0.0503   |
+---------------------------------
+Num timesteps: 148000
+Best mean reward: -9.06 - Last mean reward per episode: -9.70
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 152000
+Best mean reward: -9.06 - Last mean reward per episode: -8.29
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 156000
+Best mean reward: -8.29 - Last mean reward per episode: -8.23
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 160000
+Best mean reward: -8.23 - Last mean reward per episode: -9.38
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 164000
+Best mean reward: -8.23 - Last mean reward per episode: -8.72
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 168000
+Best mean reward: -8.23 - Last mean reward per episode: -7.92
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 172000
+Best mean reward: -7.92 - Last mean reward per episode: -8.70
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 176000
+Best mean reward: -7.92 - Last mean reward per episode: -6.97
+Saving new best model to /home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/2022-06-17/SACTuned/callback/best_model
+/home/hjkwon/anaconda3/envs/rl_env/lib/python3.9/site-packages/torch/nn/modules/module.py:1383: UserWarning: positional arguments and argument "destination" are deprecated. nn.Module.state_dict will not accept them in the future. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 180000
+Best mean reward: -6.97 - Last mean reward per episode: -7.66
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 184000
+Best mean reward: -6.97 - Last mean reward per episode: -7.69
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 188000
+Best mean reward: -6.97 - Last mean reward per episode: -8.55
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 39.4     |
+|    ep_rew_mean     | -8.52    |
+|    success_rate    | 0.3      |
+| time/              |          |
+|    episodes        | 4000     |
+|    fps             | 1        |
+|    time_elapsed    | 104518   |
+|    total_timesteps | 188816   |
+| train/             |          |
+|    actor_loss      | 6.91     |
+|    critic_loss     | 0.207    |
+|    ent_coef        | 0.00158  |
+|    ent_coef_loss   | 2.4      |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 47000    |
+|    std             | 0.0497   |
+---------------------------------
+Num timesteps: 192000
+Best mean reward: -6.97 - Last mean reward per episode: -8.89
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 196000
+Best mean reward: -6.97 - Last mean reward per episode: -9.94
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 200000
+Best mean reward: -6.97 - Last mean reward per episode: -8.10
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 204000
+Best mean reward: -6.97 - Last mean reward per episode: -8.32
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 208000
+Best mean reward: -6.97 - Last mean reward per episode: -10.18
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 212000
+Best mean reward: -6.97 - Last mean reward per episode: -7.20
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 216000
+Best mean reward: -6.97 - Last mean reward per episode: -8.61
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 220000
+Best mean reward: -6.97 - Last mean reward per episode: -9.50
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 224000
+Best mean reward: -6.97 - Last mean reward per episode: -10.37
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 35.9     |
+|    ep_rew_mean     | -10.1    |
+|    success_rate    | 0.34     |
+| time/              |          |
+|    episodes        | 5000     |
+|    fps             | 1        |
+|    time_elapsed    | 130705   |
+|    total_timesteps | 227300   |
+| train/             |          |
+|    actor_loss      | 11.5     |
+|    critic_loss     | 0.711    |
+|    ent_coef        | 0.00387  |
+|    ent_coef_loss   | 0.817    |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 56600    |
+|    std             | 0.0483   |
+---------------------------------
+Num timesteps: 228000
+Best mean reward: -6.97 - Last mean reward per episode: -10.59
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 232000
+Best mean reward: -6.97 - Last mean reward per episode: -9.90
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 236000
+Best mean reward: -6.97 - Last mean reward per episode: -9.55
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 240000
+Best mean reward: -6.97 - Last mean reward per episode: -9.25
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 244000
+Best mean reward: -6.97 - Last mean reward per episode: -9.77
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 248000
+Best mean reward: -6.97 - Last mean reward per episode: -8.78
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 252000
+Best mean reward: -6.97 - Last mean reward per episode: -13.88
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 256000
+Best mean reward: -6.97 - Last mean reward per episode: -16.54
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 260000
+Best mean reward: -6.97 - Last mean reward per episode: -11.06
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 264000
+Best mean reward: -6.97 - Last mean reward per episode: -11.94
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 268000
+Best mean reward: -6.97 - Last mean reward per episode: -13.52
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 45.8     |
+|    ep_rew_mean     | -13.9    |
+|    success_rate    | 0.1      |
+| time/              |          |
+|    episodes        | 6000     |
+|    fps             | 1        |
+|    time_elapsed    | 158601   |
+|    total_timesteps | 268336   |
+| train/             |          |
+|    actor_loss      | 11.5     |
+|    critic_loss     | 0.698    |
+|    ent_coef        | 0.00418  |
+|    ent_coef_loss   | -7.67    |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 66800    |
+|    std             | 0.048    |
+---------------------------------
+Num timesteps: 272000
+Best mean reward: -6.97 - Last mean reward per episode: -12.87
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 276000
+Best mean reward: -6.97 - Last mean reward per episode: -12.53
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 280000
+Best mean reward: -6.97 - Last mean reward per episode: -12.69
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 284000
+Best mean reward: -6.97 - Last mean reward per episode: -9.47
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 288000
+Best mean reward: -6.97 - Last mean reward per episode: -11.02
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 292000
+Best mean reward: -6.97 - Last mean reward per episode: -9.02
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 296000
+Best mean reward: -6.97 - Last mean reward per episode: -12.10
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 300000
+Best mean reward: -6.97 - Last mean reward per episode: -12.06
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 304000
+Best mean reward: -6.97 - Last mean reward per episode: -11.31
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 308000
+Best mean reward: -6.97 - Last mean reward per episode: -11.02
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 39.3     |
+|    ep_rew_mean     | -11.2    |
+|    success_rate    | 0.27     |
+| time/              |          |
+|    episodes        | 7000     |
+|    fps             | 1        |
+|    time_elapsed    | 187122   |
+|    total_timesteps | 310144   |
+| train/             |          |
+|    actor_loss      | 14.1     |
+|    critic_loss     | 0.754    |
+|    ent_coef        | 0.00303  |
+|    ent_coef_loss   | 3.25     |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 77300    |
+|    std             | 0.0475   |
+---------------------------------
+Num timesteps: 312000
+Best mean reward: -6.97 - Last mean reward per episode: -11.37
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 316000
+Best mean reward: -6.97 - Last mean reward per episode: -11.52
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 320000
+Best mean reward: -6.97 - Last mean reward per episode: -10.95
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 324000
+Best mean reward: -6.97 - Last mean reward per episode: -10.71
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 328000
+Best mean reward: -6.97 - Last mean reward per episode: -11.23
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 332000
+Best mean reward: -6.97 - Last mean reward per episode: -12.09
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 336000
+Best mean reward: -6.97 - Last mean reward per episode: -11.45
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 340000
+Best mean reward: -6.97 - Last mean reward per episode: -11.97
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 344000
+Best mean reward: -6.97 - Last mean reward per episode: -12.81
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 348000
+Best mean reward: -6.97 - Last mean reward per episode: -11.50
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 39.9     |
+|    ep_rew_mean     | -11.2    |
+|    success_rate    | 0.27     |
+| time/              |          |
+|    episodes        | 8000     |
+|    fps             | 1        |
+|    time_elapsed    | 213735   |
+|    total_timesteps | 351460   |
+| train/             |          |
+|    actor_loss      | 13.1     |
+|    critic_loss     | 0.874    |
+|    ent_coef        | 0.00277  |
+|    ent_coef_loss   | -7.31    |
+|    learning_rate   | 0.000152 |
+|    n_updates       | 87600    |
+|    std             | 0.0472   |
+---------------------------------
+Num timesteps: 352000
+Best mean reward: -6.97 - Last mean reward per episode: -10.96
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 356000
+Best mean reward: -6.97 - Last mean reward per episode: -11.10
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 360000
+Best mean reward: -6.97 - Last mean reward per episode: -9.98
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 364000
+Best mean reward: -6.97 - Last mean reward per episode: -10.61
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 368000
+Best mean reward: -6.97 - Last mean reward per episode: -11.10
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 372000
+Best mean reward: -6.97 - Last mean reward per episode: -12.72
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended when the environment has not been created with render=True. The rendering will probably be weird. Prefer making the environment with option `render=True`. For example: `env = gym.make('PandaReach-v2', render=True)`.
+  warnings.warn(
+Num timesteps: 376000
+Best mean reward: -6.97 - Last mean reward per episode: -13.47
+/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/env/pybulletCust.py:94: UserWarning: The use of the render method is not recommended 

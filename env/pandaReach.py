@@ -1,4 +1,3 @@
-
 from panda_gym.envs.core import Task
 from panda_gym.utils import distance
 from env.pybulletCust import PyBullet 
@@ -71,7 +70,6 @@ class Reach(Task):
         achieved_goal = self.get_achieved_goal()
 
         d = distance(achieved_goal, desired_goal)
-
         return np.array(((d < self.distance_threshold)), dtype=np.float64)
 
     def compute_reward(self, achieved_goal, desired_goal, info: Dict[str, Any]) -> Union[np.ndarray, float]:

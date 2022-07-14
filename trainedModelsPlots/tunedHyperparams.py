@@ -9,7 +9,8 @@ class Hyperparameters():
     self.envName = envName
     self.algorithm = algorithm
     self.type = type
-
+    # print("true/false: ", (self.envName == "PandaReachDepthDense-v1") and (self.algorithm == SAC) \
+    #   and (self.type == "cnn"))
 
   def ppoNetArch(self, net_arch_width_int, net_arch_depth):
     net_arch_width = 2 ** net_arch_width_int
@@ -366,9 +367,8 @@ class Hyperparameters():
       return kwargs
 
 
-
-    elif (self.envName == (self.envName == "PandarReachDepthBlockDense-v1") or (self.envName == "PandaReachDepthDense-v1") \
-      and (self.algorithm == SAC) and (self.type == "cnn")):  
+    elif (self.envName == (self.envName == "PandaReachDepthBlockDense-v1") or (self.envName == "PandaReachDepthDense-v1")  \
+       and (self.algorithm == SAC) and (self.type == "cnn")):  
 
       """
       {'policy': 'CnnPolicy', 'device': 'cuda', 'verbose': 0, 'use_sde': 'True', 'use_sde_at_warmup': 'True', 
@@ -384,19 +384,45 @@ class Hyperparameters():
       'train_freq': 1, 'action_noise_int': 2, 'net_arch_width_int': 8, 'net_arch_depth': 4}. 
       Best is trial 10 with value: -6.748622999999999.
       """
+      
+      """
+      PANDAREACH SAC CNN July 12
+      Number of finished trials:  19
+      Best trial:
+      Value:  -6.303952600000001
+      Params: 
+          gamma: 0.9864406015682582
+          tau: 0.03292173459733876
+          lr: 5.218340576030402e-07
+          batch_size_num: 8
+      User attrs:
+          learning_rate: 5.218340576030402e-07
+          batch_size: 256
+          learning_starts: 5000
+          buffer_size: 50000
+          train_freq: 100
+          net_arch_width: 128
+          net_arch_depth: 4
+          gradient_steps: 100
+          action_noise: 0.1
+          ent_coef: auto
 
-      net_arch = self.sacNetArch(net_arch_width_int=8, net_arch_depth=4)
+      """
+
+
+      net_arch = self.sacNetArch(net_arch_width_int=7, net_arch_depth=4)
 
 
       kwargs = {
-          "gradient_steps": 50, 
-          "train_freq": 50,
-          "gamma": 0.9815349183392321,
-          "tau": 0.02884082120552075,
-          "learning_rate": 1.0566976937791386e-05,
+          "gradient_steps": 100, 
+          "train_freq": 100,
+          "gamma": 0.9864406015682582,
+          "tau": 0.03292173459733876,
+          "learning_rate": 5.218340576030402e-07,
           "batch_size": 256,
           "learning_starts": 5000,
-          "buffer_size": 20000,
+          "buffer_size": 50000,
+          "ent_coef": "auto",
           "policy_kwargs": {
               "net_arch": net_arch,
               "features_extractor_class": CustomCNN,
@@ -404,10 +430,10 @@ class Hyperparameters():
           },
       }
 
-      actionNoiseInt = 0.05
+      actionNoise = 0.1
       n_envs = 4
 
-      return kwargs, n_envs, actionNoiseInt
+      return kwargs, n_envs, actionNoise
 
 
 
@@ -460,7 +486,8 @@ class Hyperparameters():
       }
 
       actionNoiseInt = 0.0
+      n_envs = 4
 
-      return kwargs, actionNoiseInt
+      return kwargs, n_envs, actionNoiseInt
 
 
