@@ -9,8 +9,9 @@ class Hyperparameters():
     self.envName = envName
     self.algorithm = algorithm
     self.type = type
-    # print("true/false: ", (self.envName == "PandaReachDepthDense-v1") and (self.algorithm == SAC) \
-    #   and (self.type == "cnn"))
+    print("true/false: ", (self.envName == "PandaGraspDepthDense-v1") and (self.algorithm == SAC) \
+      and (self.type == "vect"))
+
 
   def ppoNetArch(self, net_arch_width_int, net_arch_depth):
     net_arch_width = 2 ** net_arch_width_int
@@ -78,6 +79,8 @@ class Hyperparameters():
           },
       }
 
+      print("HEREREER")
+
       return kwargs
 
 
@@ -123,6 +126,7 @@ class Hyperparameters():
 
       actionNoiseInt = 0.15
       n_envs = 5
+      
 
       return kwargs, n_envs, actionNoiseInt
 
@@ -130,54 +134,55 @@ class Hyperparameters():
 
   #GRASP AND REACH
 
-    elif (self.envName == (self.envName == "PandaGraspDepthBlockDense-v1") or (self.envName == "PandaGraspDepthDense-v1") \
-      or (self.envName == "PandaReachDepthDense-v1") and (self.algorithm == PPO) and (self.type == "vect")):
+    # elif (self.envName == (self.envName == "PandaGraspDepthBlockDense-v1") or (self.envName == "PandaGraspDepthDense-v1") \
+    #   or (self.envName == "PandaReachDepthDense-v1") and (self.algorithm == PPO) and (self.type == "vect")):
 
-      """
-      Number of finished trials:  22
-      Best trial:
-        Value:  -3.0011657
-        Params: 
-          gamma: 0.9093373345474445
-          gae_lambda: 0.9290620915181558
-          lr: 0.003576327533197799
-          n_epochs: 7
-          batch_size: 12
-          net_arch_width_int: 7
-          net_arch_depth: 5
-          n_envs: 4
-        User attrs:
-          vf_coef: 0.75
-          clip_range: 0.075
-          max_grad_norm: 0.5
-          batch_size: 4096
-          n_steps: 16384
-          ent_coef: 1e-06
-          net_arch_width: 128
-          n_envs = 4
-      """
+    #   """
+    #   Number of finished trials:  22
+    #   Best trial:
+    #     Value:  -3.0011657
+    #     Params: 
+    #       gamma: 0.9093373345474445
+    #       gae_lambda: 0.9290620915181558
+    #       lr: 0.003576327533197799
+    #       n_epochs: 7
+    #       batch_size: 12
+    #       net_arch_width_int: 7
+    #       net_arch_depth: 5
+    #       n_envs: 4
+    #     User attrs:
+    #       vf_coef: 0.75
+    #       clip_range: 0.075
+    #       max_grad_norm: 0.5
+    #       batch_size: 4096
+    #       n_steps: 16384
+    #       ent_coef: 1e-06
+    #       net_arch_width: 128
+    #       n_envs = 4
+    #   """
+    #   print("HEREREER")
 
-      net_arch = self.ppoNetArch(net_arch_width_int=7, net_arch_depth=5)
+    #   net_arch = self.ppoNetArch(net_arch_width_int=7, net_arch_depth=5)
 
 
-      kwargs = {
-          "gamma": 0.9093373345474445,
-          "gae_lambda": 0.9290620915181558,
-          "learning_rate": 0.003576327533197799,
-          "ent_coef": 1e-06,
-          "max_grad_norm": 0.5,
-          "vf_coef": 0.75,
-          "clip_range": 0.075,
-          "batch_size": 4096,
-          "n_steps": 16384,
-          "n_epochs": 7,
-          "verbose": 1,
-          "policy_kwargs": {
-              "net_arch": net_arch,
-          },
-      }
+    #   kwargs = {
+    #       "gamma": 0.9093373345474445,
+    #       "gae_lambda": 0.9290620915181558,
+    #       "learning_rate": 0.003576327533197799,
+    #       "ent_coef": 1e-06,
+    #       "max_grad_norm": 0.5,
+    #       "vf_coef": 0.75,
+    #       "clip_range": 0.075,
+    #       "batch_size": 4096,
+    #       "n_steps": 16384,
+    #       "n_epochs": 7,
+    #       "verbose": 1,
+    #       "policy_kwargs": {
+    #           "net_arch": net_arch,
+    #       },
+    #   }
 
-      return kwargs
+    #   return kwargs
 
 
     elif (self.envName == (self.envName == "PandaGraspDepthBlock-v1") or (self.envName == "PandaGraspDepth-v1") \
@@ -276,8 +281,12 @@ class Hyperparameters():
       }
 
       actionNoiseInt = 0.0
+      # actionNoiseInt = 0.15
+      n_envs = 2
 
-      return kwargs, actionNoiseInt
+      print("HEREREER")
+
+      return kwargs, n_envs, actionNoiseInt
 
 
 
@@ -331,6 +340,8 @@ class Hyperparameters():
       }
 
       actionNoise = 0.15
+
+      print("HERE")
 
       return kwargs, actionNoise
 

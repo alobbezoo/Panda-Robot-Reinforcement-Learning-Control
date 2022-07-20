@@ -22,6 +22,7 @@ def record_video_single(model, env_id, video_dir, wrapper, render=False, video_l
     """
 
     eval_env = DummyVecEnv([lambda: wrapper(gym.make(env_id, render=render))]) 
+    
 
     # Start the video at step=0 and record 500 steps
     eval_env = VecVideoRecorder(eval_env, video_folder=video_dir,
@@ -29,6 +30,7 @@ def record_video_single(model, env_id, video_dir, wrapper, render=False, video_l
                                 name_prefix=prefix)
 
     obs = eval_env.reset()
+    print("record vid sigal reset called")
     for _ in range(video_length):
         action, _ = model.predict(obs)
         obs, _, _, _ = eval_env.step(action)
@@ -47,7 +49,7 @@ def record_video_multiple(model, n_envs, env_id, video_dir, wrapper, render=Fals
         os.mkdir(monitorDir)
 
     eval_env = make_panda_env(env_id=env_id, n_envs=n_envs, seed=0, monitor_dir=monitorDir, wrapper=wrapper)
-    eval_env = VecFrameStack(eval_env, n_stack=n_envs)
+    # eval_env = VecFrameStack(eval_env, n_stack=n_envs)
     
 
     # Start the video at step=0 and record 500 steps

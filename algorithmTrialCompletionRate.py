@@ -26,8 +26,9 @@ from SB3.recordVideo import record_video_single, record_video_multiple
 
 #INPUTS:
 # from wrappers.pandaTrainedBlockGraspWrapperVect_BW_D_0_Supervised import PandaWrapper
-from wrappers.pandaWrapperVect import PandaWrapperFunction
+# from wrappers.pandaWrapperVect import PandaWrapperFunction
 # from wrappers.pandaWrapperBW_D import PandaWrapper
+from wrappers.pandaWrapperBW_D import PandaWrapper
 
 from stable_baselines3.common.evaluation import evaluate_policy
 
@@ -44,23 +45,23 @@ from stable_baselines3.common import base_class
 from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, VecMonitor, is_vecenv_wrapped
 
 
-# POLICY = PPO
-POLICY = SAC
-# POLICYNAME = "PPO"
-POLICYNAME = "SAC"
+POLICY = PPO
+# POLICY = SAC
+POLICYNAME = "PPO"
+# POLICYNAME = "SAC"
 
-# ENVNAME = "PandaReach"
+ENVNAME = "PandaReach"
 # ENVNAME = "PandaGrasp"
-ENVNAME = "PandaPickandPlace"
+# ENVNAME = "PandaPickandPlace"
 # ENVNAME = "PPO_Semi_Supervised_PandaGrasp"
 
-# TYPE = "CNN"
-TYPE = "Vect"
+TYPE = "CNN"
+# TYPE = "Vect"
 
 REWARDTYPE = "Dense"
 # REWARDTYPE = "Sparse"
 
-PandaWrapper = PandaWrapperFunction(10)
+# PandaWrapper = PandaWrapperFunction(10)
 
 # # VECT
 
@@ -77,35 +78,35 @@ PandaWrapper = PandaWrapperFunction(10)
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/Vect/SAC/Sparce/best_model.zip"
 
 # # Pick and Place
-MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/SAC/best_model.zip"
+# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/SAC/best_model.zip"
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaPickandPlace/Vect/PPO/PPO_PandaPickandPlace1_Vect/best_model.zip"
 
 
 # # CNN
 
 # # Reach:
-# MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Cnn/PPO/best_model.zip"
+MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Cnn/PPO/best_model.zip"
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaReach/Cnn/SAC/best_model.zip"
 
 # # Grasp:
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/Cnn/PPO/best_model.zip"
 # MODELPATH = "/home/hjkwon/Documents/Panda-Robot-RL-Control-with-RGBD-Sensor/trainedModelsPlots/PandaGrasp/Cnn/SAC/best_model.zip"
 
-loaded_model = POLICY.load(MODELPATH, device="cpu")
+loaded_model = POLICY.load(MODELPATH, device="cuda")
 MODEL = loaded_model.policy
 
-# ENV_ID = "PandaReachDepthDense-v1" 
+ENV_ID = "PandaReachDepthDense-v1" 
 # ENV_ID = "PandaReachDepth-v1" 
 
 # ENV_ID = "PandaPickAndPlaceDepthBlockDense-v1" 
-ENV_ID = "PandaPickAndPlaceDepthDense-v1" 
+# ENV_ID = "PandaPickAndPlaceDepthDense-v1" 
 # ENV_ID = "PandaGraspDepthDense-v1" 
 # ENV_ID = "PandaGraspDepthBlockDense-v1" 
 # ENV_ID = "PandaGraspDepthBlock-v1" 
 
 RENDER = False
 NEPISODES = 100
-GOALNENVS = 5
+GOALNENVS = 3
 
 
 n_envs = loaded_model.n_envs

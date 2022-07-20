@@ -31,6 +31,7 @@ class PyBullet:
                     --background_color_blue={}".format(
             *self.background_color
         )
+        print("\n\nbackground colour is: ", self.background_color)
         self.connection_mode = p.GUI if render else p.DIRECT
         self.physics_client = bc.BulletClient(connection_mode=self.connection_mode, options=options)
         self.physics_client.configureDebugVisualizer(p.COV_ENABLE_GUI, 0)
